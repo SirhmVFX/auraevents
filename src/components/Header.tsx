@@ -5,7 +5,7 @@ import { HomeIcon, InstagramIcon, LinkedInIcon, TiktokIcon } from "./Icons";
 function Header() {
   return (
     <header className="flex justify-between max-w-[1200px] mx-auto md:p-6 p-2">
-      <h1 className="hidden md:block">RC:</h1>
+      <h1 className="hidden md:block">RC: 8683441</h1>
 
       <div className="flex flex-col items-center gap-2 md:gap-4">
         <Link href="/" className=" w-[120px]">
