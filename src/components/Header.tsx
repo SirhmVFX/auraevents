@@ -1,65 +1,123 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { HomeIcon, InstagramIcon, LinkedInIcon, TiktokIcon } from "./Icons";
+import {
+  HomeIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  TiktokIcon,
+  InfoIcon,
+  CalendarIcon,
+  PlusCircleIcon,
+  BriefcaseIcon,
+  MailIcon,
+} from "./Icons";
+import { usePathname } from "next/navigation";
 
 function Header() {
-  return (
-    <header className="flex justify-between max-w-[1200px] mx-auto md:p-6 p-2">
-      <h1 className="hidden md:block">RC: 8683441</h1>
+  const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
-      <div className="flex flex-col items-center gap-2 md:gap-4">
-        <Link href="/" className=" w-[120px]">
-          <Image
-            src="/assets/aurablack.png"
-            alt="Logo"
-            width={1000}
-            height={1000}
-          />
-        </Link>
-        <div className="flex gap-4 items-center">
-          <Link
-            href="/"
-            className={`flex gap-1 items-center bg-black px-2 py-1  rounded-full text-white text-sm hover:bg-black/5 hover:text-black hover:scale-105 transition-all`}
-          >
-            {" "}
-            <HomeIcon /> Home
-          </Link>
-          <Link
-            href="/about"
-            className={`text-black/50 text-sm hover:bg-black/5 bg-white px-2 py-1  rounded-full hover:text-black hover:scale-105 transition-all`}
-          >
-            About
-          </Link>
-          <Link
-            href="/events"
-            className={`text-black/50 text-sm hover:bg-black/5 bg-white px-2 py-1  rounded-full hover:text-black hover:scale-105 transition-all`}
-          >
-            Events
-          </Link>
-          <Link
-            href="/events/new"
-            className={`text-black/50 text-sm hover:bg-black/5 bg-white px-2 py-1  rounded-full hover:text-black hover:scale-105 transition-all`}
-          >
-            New Event
-          </Link>
-          <Link
-            href="/events/new"
-            className={`text-black/50 text-sm hover:bg-black/5 bg-white px-2 py-1  rounded-full hover:text-black hover:scale-105 transition-all`}
-          >
-            Projects
-          </Link>
-          <Link
-            href="/events/new"
-            className={`text-black/50 text-sm hover:bg-black/5 bg-white px-2 py-1  rounded-full hover:text-black hover:scale-105 transition-all`}
-          >
-            Contact
+  useEffect(() => {
+    const onScroll = () => {
+      setIsScrolled(window.scrollY > 8);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const Links = [
+    {
+      name: "Home",
+      href: "/",
+      icon: <HomeIcon />,
+    },
+    {
+      name: "About",
+      href: "/about",
+      icon: <InfoIcon />,
+    },
+    {
+      name: "Events",
+      href: "/events",
+      icon: <CalendarIcon />,
+    },
+    {
+      name: "New Event",
+      href: "/events/new",
+      icon: <PlusCircleIcon />,
+    },
+    {
+      name: "Projects",
+      href: "/projects",
+      icon: <BriefcaseIcon />,
+    },
+    {
+      name: "Contact",
+      href: "/contact",
+      icon: <MailIcon />,
+    },
+  ];
+
+  return (
+    <header
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        isScrolled ? "backdrop-blur-sm bg-white/60 shadow-sm" : "bg-transparent"
+      }`}
+    >
+      <div className="max-w-[1200px] mx-auto p-2 md:p-4 flex gap-3 justify-between items-center">
+        {/* Left: Logo */}
+        <div className="flex items-center gap-3">
+          <Link href="/" className="w-[110px] md:w-[85px] inline-block">
+            <Image
+              src="/assets/aurablack.png"
+              alt="Logo"
+              width={1000}
+              height={1000}
+            />
           </Link>
         </div>
-      </div>
-      <div className="hidden md:flex gap-4">
-        <InstagramIcon />
-        <TiktokIcon />
-        <LinkedInIcon />
+
+        {/* Center: Nav */}
+        <nav className="hidden md:flex justify-center items-center ">
+          <ul className="flex gap-3 items-center">
+            {Links.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    aria-current={isActive ? "page" : undefined}
+                    className={`flex items-center gap-1 px-3 py-1 rounded-full text-sm font-semibold transition-all hover:bg-black/5 hover:scale-105 ${
+                      isActive ? "bg-black text-white" : "text-black"
+                    }`}
+                  >
+                    {isActive && (
+                      <span className="inline-flex">{link.icon}</span>
+                    )}
+                    <span>{link.name}</span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+
+        {/* Right: Socials */}
+        <div className="hidden md:flex justify-end items-center gap-4 text-black">
+          <InstagramIcon />
+          <TiktokIcon />
+          <LinkedInIcon />
+          <h1 className="hidden md:block text-xs text-black/70">RC: 8683441</h1>
+        </div>
+
+        {/* Mobile: compact right-aligned icon */}
+        <div className="md:hidden col-span-2 col-start-3 flex justify-end items-center">
+          <InstagramIcon />
+        </div>
       </div>
     </header>
   );
