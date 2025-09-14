@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Architects_Daughter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -21,7 +22,7 @@ const architectsDaughter = Architects_Daughter({
 
 export const metadata: Metadata = {
   title: "Aura Events",
-  description: "No 1. Event Planner - Your Vision, Our Canvase",
+  description: "No 1. Event Planner - Your Vision, Our Canvas",
 };
 
 export default function RootLayout({
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body className={` ${architectsDaughter.variable} } antialiased`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
