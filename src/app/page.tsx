@@ -1,7 +1,15 @@
+import Articles from "@/components/Articles";
+import Cta from "@/components/Cta";
+import Herosection from "@/components/Herosection";
+
 export default function Home() {
   return (
     <>
-      <h1>hy</h1>
+      <div className="w-full">
+        <Herosection />
+        <Articles />
+        <Cta />
+      </div>
     </>
   );
 }
