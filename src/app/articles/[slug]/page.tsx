@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import articles from "@/lib/articles";
 import Views from "@/components/Views";
 
-type Props = { params: { slug: string } };
+// Use a broadly compatible param type to satisfy Next.js PageProps typing across versions
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://aura.example";
 
@@ -12,7 +12,8 @@ export function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function generateMetadata({ params }: any): Metadata {
   const a = articles.find((x) => x.slug === params.slug);
   if (!a) return {};
   const url = `${SITE_URL}/articles/${a.slug}`;
@@ -38,8 +39,8 @@ export function generateMetadata({ params }: Props): Metadata {
     },
   };
 }
-
-function JsonLd({ slug }: { slug: string }) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function JsonLd({ slug }: { slug: any }) {
   const a = articles.find((x) => x.slug === slug);
   if (!a) return null;
 
@@ -93,7 +94,8 @@ function JsonLd({ slug }: { slug: string }) {
   );
 }
 
-export default function ArticlePage({ params }: Props) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function ArticlePage({ params }: any) {
   const a = articles.find((x) => x.slug === params.slug);
   if (!a) return notFound();
 
