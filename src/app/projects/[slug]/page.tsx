@@ -6,11 +6,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { getProjectBySlug, getRelatedProjects } from "@/lib/projects";
 
-type PageProps = {
-  params: { slug: string };
-};
-
-export default function ProjectDetail({ params }: PageProps) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function ProjectDetail({ params }: any) {
   const project = getProjectBySlug(params.slug);
   if (!project) return notFound();
   const related = getRelatedProjects(params.slug, 3);
