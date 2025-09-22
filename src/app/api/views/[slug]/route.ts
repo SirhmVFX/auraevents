@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { NextResponse } from "next/server";
 
 export const runtime = "edge";
@@ -35,21 +36,17 @@ async function kvIncr(key: string): Promise<number | null> {
   return typeof v === "number" ? v : v ? Number(v) : null;
 }
 
-export async function GET(
-  _req: Request,
-  { params }: { params: { slug: string } }
-) {
-  const key = `views:${params.slug}`;
+export async function GET(_req: Request, context: any) {
+  const slug = context?.params?.slug as string;
+  const key = `views:${slug}`;
   const kv = await kvGet(key);
   const count = kv ?? memory.get(key) ?? 0;
   return NextResponse.json({ views: count });
 }
 
-export async function POST(
-  _req: Request,
-  { params }: { params: { slug: string } }
-) {
-  const key = `views:${params.slug}`;
+export async function POST(_req: Request, context: any) {
+  const slug = context?.params?.slug as string;
+  const key = `views:${slug}`;
   let count = (memory.get(key) ?? 0) + 1;
   memory.set(key, count);
   const kv = await kvIncr(key);
