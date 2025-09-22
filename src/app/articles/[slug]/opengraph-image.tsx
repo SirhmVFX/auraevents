@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 // src/app/articles/[slug]/opengraph-image.tsx
 import { ImageResponse } from "next/og";
 import articles from "@/lib/articles";
