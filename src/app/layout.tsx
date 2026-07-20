@@ -3,22 +3,13 @@ import { Architects_Daughter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const architectsDaughter = Architects_Daughter({
   variable: "--font-architects-daughter",
   subsets: ["latin"],
   weight: ["400"],
 });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
 
 export const metadata: Metadata = {
   title: "Aura Events",
@@ -32,10 +23,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` ${architectsDaughter.variable} } antialiased`}>
+      <body className={`${architectsDaughter.variable} antialiased`}>
         <Header />
         {children}
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

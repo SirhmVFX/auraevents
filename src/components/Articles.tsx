@@ -83,7 +83,7 @@ function Articles() {
           <h2 className="text-3xl md:text-4xl font-extrabold">Articles</h2>
         </div>
         <Link
-          href="#"
+          href="/articles"
           className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black text-white text-sm hover:opacity-90 transition"
         >
           View all

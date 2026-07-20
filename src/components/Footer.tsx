@@ -34,11 +34,13 @@ function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    className="hover:text-white transition"
-                    href="/about#why"
-                  >
-                    Why Us
+                  <Link className="hover:text-white transition" href="/services">
+                    Services
+                  </Link>
+                </li>
+                <li>
+                  <Link className="hover:text-white transition" href="/events">
+                    Events
                   </Link>
                 </li>
                 <li>
@@ -46,15 +48,22 @@ function Footer() {
                     className="hover:text-white transition"
                     href="/projects"
                   >
-                    Platform
+                    Projects
                   </Link>
                 </li>
                 <li>
-                  <span className="opacity-60 cursor-not-allowed">Pricing</span>
+                  <Link className="hover:text-white transition" href="/services#pricing">
+                    Pricing
+                  </Link>
+                </li>
+                <li>
+                  <Link className="hover:text-white transition" href="/articles">
+                    Articles
+                  </Link>
                 </li>
                 <li>
                   <Link className="hover:text-white transition" href="/contact">
-                    Contacts
+                    Contact
                   </Link>
                 </li>
               </ul>
@@ -67,9 +76,8 @@ function Footer() {
             >
               {email}
               <span
-                className={`absolute -bottom-6 left-0 text-xs rounded px-2 py-1 bg-white text-black transition-opacity ${
-                  copied ? "opacity-100" : "opacity-0"
-                }`}
+                className={`absolute -bottom-6 left-0 text-xs rounded px-2 py-1 bg-white text-black transition-opacity ${copied ? "opacity-100" : "opacity-0"
+                  }`}
               >
                 Copied!
               </span>
@@ -79,20 +87,20 @@ function Footer() {
           {/* Middle: addresses + socials */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 py-8 border-b border-white/15">
             <div>
-              <h3 className="font-semibold mb-2">Raleigh</h3>
+              <h3 className="font-semibold mb-2">Lagos HQ</h3>
               <address className="not-italic text-sm text-white/70 leading-relaxed">
-                125 N Harrington Street, Raleigh
-                <br /> NC 27603
-                <br /> +1 (919) 803-8413
+                14 Akin Adesola Street
+                <br /> Victoria Island, Lagos
+                <br /> +234 801 234 5678
               </address>
             </div>
 
             <div>
-              <h3 className="font-semibold mb-2">Charlotte</h3>
+              <h3 className="font-semibold mb-2">Abuja Office</h3>
               <address className="not-italic text-sm text-white/70 leading-relaxed">
-                220 East Peterson Drive, Charlotte
-                <br /> NC 28277
-                <br /> +1 (704) 333-7272
+                Plot 1234, Aminu Kano Crescent
+                <br /> Wuse 2, Abuja
+                <br /> +234 802 345 6789
               </address>
             </div>
 

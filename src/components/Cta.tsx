@@ -12,7 +12,7 @@ function Cta() {
         whileInView={{ y: 0, opacity: 1, scale: 1 }}
         viewport={{ once: true, amount: 0.6 }}
         transition={{ duration: 0.4 }}
-        className="mx-auto mb-6 h-14 w-14 rounded-2xl bg-gradient-to-b from-orange-400 to-orange-500 shadow-[0_10px_30px_-10px_rgba(234,88,12,0.7)] flex items-center justify-center"
+        className="mx-auto mb-6 h-14 w-14 rounded-2xl bg-gradient-gold shadow-[0_10px_30px_-10px_rgba(184,146,10,0.7)] flex items-center justify-center"
         aria-hidden
       >
         {/* chain/link icon */}
@@ -71,7 +71,7 @@ function Cta() {
         </Link>
         <Link
           href="/signup"
-          className="inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-b from-orange-500 to-orange-600 shadow-[0_10px_30px_-10px_rgba(234,88,12,0.8)] hover:opacity-95 active:scale-[0.99] transition"
+          className="inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold text-white bg-gradient-gold shadow-[0_10px_30px_-10px_rgba(184,146,10,0.8)] hover:opacity-95 active:scale-[0.99] transition"
         >
           Start for free
         </Link>

@@ -123,12 +123,12 @@ function Herosection() {
                 </div>
 
                 <div className="mt-5 flex gap-3">
-                  <button className="bg-white text-black px-5 py-3 rounded-full font-semibold shadow-md hover:shadow-lg hover:scale-[1.02] transition">
+                  <a href="/contact" className="bg-white text-black px-5 py-3 rounded-full font-semibold shadow-md hover:shadow-lg hover:scale-[1.02] transition">
                     Book Now
-                  </button>
-                  <button className="border border-white text-white px-5 py-3 rounded-full font-semibold shadow-md hover:shadow-lg hover:scale-[1.02] transition">
+                  </a>
+                  <a href="/contact#enquiry" className="border border-white text-white px-5 py-3 rounded-full font-semibold shadow-md hover:shadow-lg hover:scale-[1.02] transition">
                     Make Enquiries
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
