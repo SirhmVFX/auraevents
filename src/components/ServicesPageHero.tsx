@@ -12,12 +12,12 @@ export default function ServicesPageHero() {
                 transition={{ duration: 0.5 }}
                 className="text-center"
             >
-                <div className="inline-flex items-center gap-2 rounded-full bg-orange-100 text-orange-600 px-4 py-2 text-xs font-bold mb-6">
+                <div className="inline-flex items-center gap-2 rounded-full bg-gold-pale text-gold px-4 py-2 text-xs font-bold mb-6">
                     <span>✨</span> End-to-end event services
                 </div>
                 <h1 className="text-4xl md:text-7xl font-extrabold leading-tight mb-6">
                     Every event type, <br />
-                    <span className="bg-gradient-to-r from-orange-500 to-rose-500 bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-[#7a6520] to-[#d4a853] bg-clip-text text-transparent">
                         one expert team
                     </span>
                 </h1>

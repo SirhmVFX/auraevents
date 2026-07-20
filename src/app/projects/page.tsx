@@ -177,9 +177,9 @@ export default function Projects() {
 
                   {/* Testimonial preview if exists */}
                   {p.testimonial && (
-                    <div className="mt-3 rounded-xl bg-orange-50 border border-orange-100 px-3 py-2">
+                    <div className="mt-3 rounded-xl bg-gold-pale border border-gold/20 px-3 py-2">
                       <p className="text-xs text-black/60 line-clamp-2 italic">&ldquo;{p.testimonial.text}&rdquo;</p>
-                      <p className="text-[10px] font-bold text-orange-600 mt-1">— {p.testimonial.name}</p>
+                      <p className="text-[10px] font-bold text-gold mt-1">— {p.testimonial.name}</p>
                     </div>
                   )}
 
@@ -216,7 +216,7 @@ export default function Projects() {
                     <span className="text-black/20">·</span>
                     <span className="text-xs text-black/40">{p.date}</span>
                   </div>
-                  <h2 className="font-extrabold text-base group-hover:text-orange-500 transition">{p.title}</h2>
+                  <h2 className="font-extrabold text-base group-hover:text-gold transition">{p.title}</h2>
                   <p className="text-sm text-black/50 mt-0.5">{p.client} · {p.location}</p>
                 </div>
                 <div className="hidden md:flex items-center gap-2 flex-shrink-0">

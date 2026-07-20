@@ -99,7 +99,7 @@ function Articles() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.4, delay: i * 0.05 }}
             whileHover={{ y: -6 }}
-            className="group relative overflow-hidden rounded-2xl border border-orange-200/5 bg-white/70 backdrop-blur shadow-sm hover:shadow-xl transition-shadow"
+            className="group relative overflow-hidden rounded-2xl border border-gold/30/5 bg-white/70 backdrop-blur shadow-sm hover:shadow-xl transition-shadow"
           >
             {/** Full-card clickable overlay */}
             <Link
@@ -108,7 +108,7 @@ function Articles() {
               aria-label={`Read: ${a.title}`}
             />
             {/* Decorative gradient background */}
-            <div className="pointer-events-none absolute -top-32 -right-20 h-56 w-56 rounded-full bg-gradient-to-tr from-pink-200/50 to-orange-200/50 blur-2xl group-hover:scale-110 transition-transform" />
+            <div className="pointer-events-none absolute -top-32 -right-20 h-56 w-56 rounded-full bg-gradient-to-tr from-gold/10 to-gold/20 blur-2xl group-hover:scale-110 transition-transform" />
 
             <div className="p-5">
               <div className="mb-3 flex items-center gap-2">

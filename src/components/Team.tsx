@@ -63,7 +63,7 @@ export default function Team() {
                         whileHover={{ y: -6, transition: { duration: 0.2 } }}
                         className="group text-center rounded-3xl bg-white border border-black/5 shadow-sm overflow-hidden"
                     >
-                        <div className="relative h-60 w-full overflow-hidden bg-gradient-to-b from-orange-100 to-amber-100">
+                        <div className="relative h-60 w-full overflow-hidden bg-gradient-to-b from-gold-pale to-[#f5e8b0]">
                             <Image
                                 src={member.avatar}
                                 alt={member.name}
@@ -77,7 +77,7 @@ export default function Team() {
                         </div>
                         <div className="p-5">
                             <h3 className="font-extrabold text-lg">{member.name}</h3>
-                            <p className="text-xs text-orange-500 font-semibold mb-2">{member.role}</p>
+                            <p className="text-xs text-gold font-semibold mb-2">{member.role}</p>
                             <p className="text-xs text-black/60 leading-relaxed">{member.bio}</p>
                             <div className="mt-3 inline-flex items-center rounded-full bg-black/5 px-3 py-1 text-xs font-medium text-black/60">
                                 {member.speciality}

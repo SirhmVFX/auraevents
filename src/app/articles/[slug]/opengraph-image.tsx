@@ -27,7 +27,7 @@ export default async function OpengraphImage({
           justifyContent: "center",
           padding: 64,
           background:
-            "radial-gradient(900px 540px at 15% 10%, #ffffff, #ffe7d6 40%, #ffb77a 75%, #f97316)",
+            "radial-gradient(900px 540px at 15% 10%, #ffffff, #fdf6e3 40%, #d4a853 75%, #b8920a)",
         }}
       >
         {/* Aura logo mark */}

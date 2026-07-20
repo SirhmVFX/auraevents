@@ -46,7 +46,7 @@ export default function EventBookingWidget({ event }: { event: EventItem }) {
                             <p className="text-sm text-black/60 mb-4">
                                 Confirmation sent to <strong>{form.email}</strong>. See you at the event!
                             </p>
-                            <div className="rounded-xl bg-orange-50 border border-orange-100 p-4 text-sm text-orange-700">
+                            <div className="rounded-xl bg-gold-pale border border-gold/20 p-4 text-sm text-[#7a6520]">
                                 Add to your calendar and share with friends 🎉
                             </div>
                         </motion.div>
@@ -115,7 +115,7 @@ export default function EventBookingWidget({ event }: { event: EventItem }) {
                             <button
                                 type="submit"
                                 disabled={loading}
-                                className="w-full rounded-xl bg-orange-500 text-white font-bold py-3.5 text-sm hover:bg-orange-600 transition disabled:opacity-60"
+                                className="w-full rounded-xl bg-gold text-white font-bold py-3.5 text-sm hover:bg-gold-dark transition disabled:opacity-60"
                             >
                                 {loading ? "Processing…" : `Reserve ${qty} ticket${qty > 1 ? "s" : ""} →`}
                             </button>
@@ -169,7 +169,7 @@ export default function EventBookingWidget({ event }: { event: EventItem }) {
 
                                     <button
                                         onClick={() => setStep("booking")}
-                                        className="w-full rounded-xl bg-black text-white font-bold py-3.5 text-sm hover:bg-orange-500 transition"
+                                        className="w-full rounded-xl bg-black text-white font-bold py-3.5 text-sm hover:bg-gold transition"
                                     >
                                         Book {qty} ticket{qty > 1 ? "s" : ""} →
                                     </button>

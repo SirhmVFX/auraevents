@@ -37,7 +37,7 @@ export default function AboutHero() {
                     className="text-4xl md:text-7xl font-extrabold leading-tight max-w-2xl"
                 >
                     We make moments <br />
-                    <span className="text-orange-400">unforgettable.</span>
+                    <span className="text-gold-light">unforgettable.</span>
                 </motion.h1>
 
                 <motion.p
@@ -57,7 +57,7 @@ export default function AboutHero() {
                 >
                     <Link
                         href="/contact"
-                        className="inline-flex items-center gap-2 rounded-full bg-orange-500 text-white px-6 py-3 font-bold hover:bg-orange-600 transition"
+                        className="inline-flex items-center gap-2 rounded-full bg-gold text-white px-6 py-3 font-bold hover:bg-gold-dark transition"
                     >
                         Work with us →
                     </Link>

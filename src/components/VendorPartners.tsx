@@ -14,7 +14,7 @@ const partners = [
     { name: "Bloom Florals", category: "Florals", initials: "BF", color: "bg-rose-100" },
     { name: "Studio AV Pro", category: "AV & Tech", initials: "SA", color: "bg-indigo-100" },
     { name: "SoundWave NG", category: "Entertainment", initials: "SW", color: "bg-violet-100" },
-    { name: "Decor By Amaka", category: "Décor", initials: "DA", color: "bg-orange-100" },
+    { name: "Decor By Amaka", category: "Décor", initials: "DA", color: "bg-gold-pale" },
 ];
 
 // Duplicate for seamless infinite scroll

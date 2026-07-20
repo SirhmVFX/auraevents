@@ -73,7 +73,7 @@ export default function AvailabilityCalendar() {
                     <div className="flex flex-col gap-3 text-sm">
                         {[
                             { color: "bg-white border-2 border-black/10", label: "Available — click to book" },
-                            { color: "bg-orange-400", label: "Your selected date" },
+                            { color: "bg-gold-light", label: "Your selected date" },
                             { color: "bg-black/15", label: "Booked / unavailable" },
                             { color: "bg-black", label: "Today" },
                         ].map((item) => (
@@ -83,7 +83,7 @@ export default function AvailabilityCalendar() {
                             </div>
                         ))}
                     </div>
-                    <div className="mt-8 rounded-2xl bg-orange-50 border border-orange-100 p-5">
+                    <div className="mt-8 rounded-2xl bg-gold-pale border border-gold/20 p-5">
                         <p className="text-sm font-bold mb-1">⚡ Quick booking</p>
                         <p className="text-xs text-black/60">
                             Select an available date to instantly request a consultation slot. We confirm within 2 hours on business days.
@@ -137,11 +137,11 @@ export default function AvailabilityCalendar() {
                                     disabled={isBooked || isPastDay}
                                     className={`
                     aspect-square rounded-xl text-sm font-semibold transition-all flex items-center justify-center
-                    ${isSelected ? "bg-orange-400 text-white shadow-lg scale-105" : ""}
+                    ${isSelected ? "bg-gold-light text-white shadow-lg scale-105" : ""}
                     ${isTodayDay && !isSelected ? "bg-black text-white" : ""}
                     ${isBooked ? "bg-black/8 text-black/25 cursor-not-allowed line-through" : ""}
                     ${isPastDay && !isTodayDay ? "text-black/20 cursor-not-allowed" : ""}
-                    ${!isBooked && !isPastDay && !isSelected && !isTodayDay ? "hover:bg-orange-100 hover:text-orange-600 cursor-pointer" : ""}
+                    ${!isBooked && !isPastDay && !isSelected && !isTodayDay ? "hover:bg-gold-pale hover:text-gold cursor-pointer" : ""}
                   `}
                                 >
                                     {day}
@@ -186,7 +186,7 @@ export default function AvailabilityCalendar() {
                             <div className="flex gap-3">
                                 <Link
                                     href={`/contact?date=${selected}`}
-                                    className="flex-1 text-center rounded-xl bg-black text-white font-bold py-3 text-sm hover:bg-orange-500 transition"
+                                    className="flex-1 text-center rounded-xl bg-black text-white font-bold py-3 text-sm hover:bg-gold transition"
                                 >
                                     Book this date →
                                 </Link>

@@ -225,7 +225,7 @@ export default function BudgetEstimator() {
                                 >
                                     <div className="flex items-center justify-between">
                                         <span className="font-bold text-sm">{t.label}</span>
-                                        {i === 1 && <span className="text-[10px] font-bold rounded-full bg-orange-500/20 text-orange-500 px-2 py-0.5">Most popular</span>}
+                                        {i === 1 && <span className="text-[10px] font-bold rounded-full bg-gold/20 text-gold px-2 py-0.5">Most popular</span>}
                                     </div>
                                     <p className={`text-xs mt-0.5 ${tier === i ? "text-white/60" : "text-black/40"}`}>{t.desc}</p>
                                 </button>
@@ -252,7 +252,7 @@ export default function BudgetEstimator() {
 
                     <button
                         onClick={() => setShowResult(true)}
-                        className="w-full rounded-xl bg-black text-white font-bold py-4 text-sm hover:bg-orange-500 transition mt-2"
+                        className="w-full rounded-xl bg-black text-white font-bold py-4 text-sm hover:bg-gold transition mt-2"
                     >
                         Calculate my estimate →
                     </button>
@@ -279,14 +279,14 @@ export default function BudgetEstimator() {
                                 </div>
 
                                 {/* Range indicator */}
-                                <div className="rounded-2xl bg-orange-50 border border-orange-100 px-5 py-4">
+                                <div className="rounded-2xl bg-gold-pale border border-gold/20 px-5 py-4">
                                     <div className="flex items-center justify-between text-sm font-bold mb-1">
                                         <span className="text-black/50">Low end</span>
                                         <span className="text-black/50">High end</span>
                                     </div>
                                     <div className="flex items-center justify-between text-lg font-extrabold">
                                         <span>{fmt(breakdown.total * 0.85)}</span>
-                                        <span className="text-orange-500">→</span>
+                                        <span className="text-gold">→</span>
                                         <span>{fmt(breakdown.total * 1.15)}</span>
                                     </div>
                                     <p className="text-xs text-black/40 mt-2 text-center">Actual quote depends on your specific brief</p>
@@ -296,7 +296,7 @@ export default function BudgetEstimator() {
                                 <div>
                                     <p className="text-xs font-bold uppercase tracking-widest text-black/40 mb-4">Cost breakdown</p>
                                     <div className="flex flex-col gap-3">
-                                        <Bar label="Venue" value={breakdown.venue} max={maxVal} color="bg-orange-400" />
+                                        <Bar label="Venue" value={breakdown.venue} max={maxVal} color="bg-gold-light" />
                                         <Bar label="Production" value={breakdown.production} max={maxVal} color="bg-blue-400" />
                                         <Bar label="Décor" value={breakdown.decor} max={maxVal} color="bg-pink-400" />
                                         <Bar label="Catering" value={breakdown.catering} max={maxVal} color="bg-green-400" />
@@ -317,7 +317,7 @@ export default function BudgetEstimator() {
 
                                 <Link
                                     href={`/contact?plan=custom&type=${eventType}&guests=${guests}`}
-                                    className="flex items-center justify-center w-full rounded-xl bg-black text-white font-bold py-4 text-sm hover:bg-orange-500 transition"
+                                    className="flex items-center justify-center w-full rounded-xl bg-black text-white font-bold py-4 text-sm hover:bg-gold transition"
                                 >
                                     Get a real quote from our team →
                                 </Link>

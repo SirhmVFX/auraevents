@@ -104,7 +104,7 @@ function EventCard({
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.4, delay: index * 0.06 }}
             whileHover={{ y: -4, transition: { duration: 0.2 } }}
-            className={`group rounded-3xl overflow-hidden bg-white border shadow-sm hover:shadow-xl transition-shadow ${isFeatured ? "border-orange-200" : "border-black/5"
+            className={`group rounded-3xl overflow-hidden bg-white border shadow-sm hover:shadow-xl transition-shadow ${isFeatured ? "border-gold/30" : "border-black/5"
                 }`}
         >
             <Link href={`/events/${event.slug}`} className="block">
@@ -127,7 +127,7 @@ function EventCard({
                             {soldOut ? "Sold Out" : event.category}
                         </span>
                         {isFeatured && !soldOut && (
-                            <span className="rounded-full bg-orange-500/90 backdrop-blur-sm px-2.5 py-1 text-xs font-bold text-white">
+                            <span className="rounded-full bg-gold/90 backdrop-blur-sm px-2.5 py-1 text-xs font-bold text-white">
                                 Featured
                             </span>
                         )}
@@ -146,7 +146,7 @@ function EventCard({
 
                 {/* Content */}
                 <div className="p-5">
-                    <h2 className="font-extrabold text-lg leading-snug mb-2 group-hover:text-orange-600 transition-colors">
+                    <h2 className="font-extrabold text-lg leading-snug mb-2 group-hover:text-gold transition-colors">
                         {event.title}
                     </h2>
                     <p className="text-sm text-black/60 line-clamp-2 mb-4">{event.description}</p>
@@ -161,14 +161,14 @@ function EventCard({
                         <div>
                             <p className="font-extrabold text-lg">{event.price}</p>
                             {!soldOut && (
-                                <p className={`text-xs ${urgency ? "text-orange-500 font-bold" : "text-black/50"}`}>
+                                <p className={`text-xs ${urgency ? "text-gold font-bold" : "text-black/50"}`}>
                                     {urgency ? `⚡ Only ${event.spotsLeft} spots left!` : `${event.spotsLeft} of ${event.capacity} spots`}
                                 </p>
                             )}
                         </div>
                         <div className={`rounded-full px-4 py-2 text-xs font-bold transition ${soldOut
                                 ? "bg-black/10 text-black/40 cursor-not-allowed"
-                                : "bg-black text-white group-hover:bg-orange-500"
+                                : "bg-black text-white group-hover:bg-gold"
                             }`}>
                             {soldOut ? "Waitlist" : "Book now →"}
                         </div>

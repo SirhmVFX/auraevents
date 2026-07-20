@@ -103,7 +103,7 @@ export default function WhatsAppButton() {
 
                 {/* Ping animation when closed */}
                 {!open && (
-                    <span className="absolute top-0 right-0 w-3 h-3 rounded-full bg-orange-500 ring-2 ring-white animate-bounce" />
+                    <span className="absolute top-0 right-0 w-3 h-3 rounded-full bg-gold ring-2 ring-white animate-bounce" />
                 )}
             </motion.button>
         </div>

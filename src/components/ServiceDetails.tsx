@@ -94,7 +94,7 @@ export default function ServiceDetails() {
                                 <div className="grid grid-cols-2 gap-2 mb-6">
                                     {service.offerings.map((o) => (
                                         <div key={o} className="flex items-center gap-2 text-sm text-black/70">
-                                            <span className="text-orange-500">✓</span>
+                                            <span className="text-gold">✓</span>
                                             {o}
                                         </div>
                                     ))}

@@ -14,7 +14,7 @@ export default function NewEventPage() {
     return (
         <main className="max-w-[900px] mx-auto px-4 md:px-6 lg:px-8 py-16">
             <div className="text-center mb-12">
-                <div className="inline-flex items-center gap-2 rounded-full bg-orange-100 text-orange-600 px-4 py-2 text-xs font-bold mb-4">
+                <div className="inline-flex items-center gap-2 rounded-full bg-gold-pale text-gold px-4 py-2 text-xs font-bold mb-4">
                     🎉 Partner with us
                 </div>
                 <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">

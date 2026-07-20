@@ -121,14 +121,14 @@ export default function EventDetailPage({ params }: any) {
                                 {soldOut ? "This event is sold out" : `${event.capacity - event.spotsLeft} of ${event.capacity} spots filled`}
                             </span>
                             {urgency && (
-                                <span className="text-xs font-bold text-orange-500">
+                                <span className="text-xs font-bold text-gold">
                                     ⚡ Only {event.spotsLeft} left!
                                 </span>
                             )}
                         </div>
                         <div className="h-2 rounded-full bg-black/5 overflow-hidden">
                             <div
-                                className={`h-full rounded-full transition-all ${soldOut ? "bg-red-400" : urgency ? "bg-orange-400" : "bg-black"}`}
+                                className={`h-full rounded-full transition-all ${soldOut ? "bg-red-400" : urgency ? "bg-gold-light" : "bg-black"}`}
                                 style={{ width: `${soldOut ? 100 : fillPercent}%` }}
                             />
                         </div>

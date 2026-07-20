@@ -145,7 +145,7 @@ export default function MoodboardBuilder() {
                             key={ins.id}
                             whileTap={{ scale: 0.97 }}
                             onClick={() => toggle("inspiration", ins.id)}
-                            className={`relative rounded-2xl overflow-hidden border-2 transition-all h-28 ${board.inspiration === ins.id ? "border-orange-500 scale-105 shadow-lg" : "border-transparent hover:border-black/30"
+                            className={`relative rounded-2xl overflow-hidden border-2 transition-all h-28 ${board.inspiration === ins.id ? "border-gold scale-105 shadow-lg" : "border-transparent hover:border-black/30"
                                 }`}
                         >
                             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -153,7 +153,7 @@ export default function MoodboardBuilder() {
                             <div className={`absolute inset-0 transition-all ${board.inspiration === ins.id ? "bg-black/30" : "bg-black/40"}`} />
                             <p className="absolute bottom-2 left-0 right-0 text-center text-white text-xs font-bold">{ins.label}</p>
                             {board.inspiration === ins.id && (
-                                <div className="absolute top-2 right-2 w-5 h-5 rounded-full bg-orange-500 flex items-center justify-center text-white text-xs font-bold">✓</div>
+                                <div className="absolute top-2 right-2 w-5 h-5 rounded-full bg-gold flex items-center justify-center text-white text-xs font-bold">✓</div>
                             )}
                         </motion.button>
                     ))}
@@ -237,7 +237,7 @@ export default function MoodboardBuilder() {
                             <button
                                 disabled={complete < 2}
                                 onClick={() => setSubmitted(true)}
-                                className="px-4 py-2 rounded-xl bg-orange-500 text-white text-sm font-bold hover:bg-orange-600 transition disabled:opacity-40"
+                                className="px-4 py-2 rounded-xl bg-gold text-white text-sm font-bold hover:bg-gold-dark transition disabled:opacity-40"
                             >
                                 Send to our team →
                             </button>
@@ -299,7 +299,7 @@ export default function MoodboardBuilder() {
                         {complete >= 2 && !submitted && (
                             <button
                                 onClick={() => setSubmitted(true)}
-                                className="mt-4 w-full rounded-xl bg-black text-white font-bold py-3 text-xs hover:bg-orange-500 transition"
+                                className="mt-4 w-full rounded-xl bg-black text-white font-bold py-3 text-xs hover:bg-gold transition"
                             >
                                 Send this to our team →
                             </button>

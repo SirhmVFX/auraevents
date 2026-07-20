@@ -27,7 +27,7 @@ export default async function TwitterImage({
           justifyContent: "center",
           padding: 64,
           background:
-            "radial-gradient(900px 540px at 15% 10%, #ffffff, #ffe8cc 40%, #ffbf8f 75%, #fb923c)",
+            "radial-gradient(900px 540px at 15% 10%, #ffffff, #fdf6e3 40%, #d4a853 75%, #b8920a)",
         }}
       >
         {/* Aura logo mark */}
@@ -97,7 +97,7 @@ export default async function TwitterImage({
             fontSize: 20,
             display: "inline-flex",
             padding: "10px 16px",
-            background: "#f97316",
+            background: "#b8920a",
             color: "#fff",
             borderRadius: 999,
           }}
