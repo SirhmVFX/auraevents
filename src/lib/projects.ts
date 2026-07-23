@@ -184,7 +184,7 @@ export const projects: Project[] = [
     description:
       "Modular booths, runway moments, and influencer meet‑and‑greets across three weekends.",
     cover:
-      "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1600&auto=format&fit=crop",
+      "/assets/618753704_18385717171144083_7221965658448629619_n.jpg",
     services: ["Experiential", "Branding", "Sponsorship"],
     attendees: "3,500",
     budgetRange: "$$$",
@@ -203,7 +203,7 @@ export const projects: Project[] = [
     description:
       "Donor dinner with pledge moments, impact exhibits, and silent auction corners.",
     cover:
-      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1600&auto=format&fit=crop",
+      "/assets/688899482_17927924478277421_3063988593860540259_n.jpg",
     services: ["Fundraising", "Production", "Curation"],
     attendees: "220",
     budgetRange: "$$$",
@@ -228,7 +228,7 @@ export const projects: Project[] = [
     description:
       "Neo‑tropical theme with mixology bar, DJ, and ambient projection mapping.",
     cover:
-      "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?q=80&w=1600&auto=format&fit=crop",
+      "/assets/7947ba175476347.64b4bfd2939b4.webp",
     services: ["Concept", "Vendors", "Run Sheet"],
     attendees: "120",
     budgetRange: "$$",
@@ -260,7 +260,7 @@ export const projects: Project[] = [
     description:
       "Keynotes across two stages, 50+ exhibitor booths, and a startup pitch arena.",
     cover:
-      "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1600&auto=format&fit=crop",
+      "/assets/4b7176dcd34c21309ed1510a1f91d722.jpg ",
     services: ["Program", "Exhibition", "AV"],
     attendees: "2,300",
     budgetRange: "$$$$",

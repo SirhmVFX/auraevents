@@ -142,7 +142,7 @@ function Herosection() {
               {slidesData.map((s, i) => (
                 <div
                   key={`thumb-${s.title}-${i}`}
-                  className="relative h-16 md:h-32 rounded-sm overflow-hidden ring-1 ring-white/10"
+                  className="relative h-16 md:h-52 rounded-sm overflow-hidden ring-1 ring-white/10"
                 >
                   <Image
                     src={s.cover}

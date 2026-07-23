@@ -21,45 +21,44 @@ const Links = [
     { name: "Contact", href: "/contact", icon: <MailIcon /> },
 ];
 
-export default function MobileNav() {
+export default function MobileNav({ isSolid = true }: { isSolid?: boolean }) {
     const [open, setOpen] = useState(false);
     const pathname = usePathname();
 
     // Close on route change
-    useEffect(() => {
-        setOpen(false);
-    }, [pathname]);
+    useEffect(() => { setOpen(false); }, [pathname]);
 
     // Prevent body scroll when open
     useEffect(() => {
         document.body.style.overflow = open ? "hidden" : "";
-        return () => {
-            document.body.style.overflow = "";
-        };
+        return () => { document.body.style.overflow = ""; };
     }, [open]);
+
+    // Hamburger bar colour: white on transparent hero, black once header is solid
+    const barColor = isSolid ? "bg-black" : "bg-white";
 
     return (
         <>
-            {/* Hamburger button */}
+            {/* Hamburger */}
             <button
                 onClick={() => setOpen((v) => !v)}
                 aria-label={open ? "Close menu" : "Open menu"}
                 aria-expanded={open}
-                className="md:hidden flex flex-col justify-center items-center w-9 h-9 gap-1.5 rounded-lg hover:bg-black/5 transition"
+                className="md:hidden flex flex-col justify-center items-center w-9 h-9 gap-1.5 rounded-lg hover:bg-white/10 transition"
             >
                 <motion.span
                     animate={open ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
-                    className="block w-5 h-0.5 bg-black rounded origin-center"
+                    className={`block w-5 h-0.5 rounded origin-center transition-colors duration-300 ${barColor}`}
                     transition={{ duration: 0.25 }}
                 />
                 <motion.span
                     animate={open ? { opacity: 0 } : { opacity: 1 }}
-                    className="block w-5 h-0.5 bg-black rounded"
+                    className={`block w-5 h-0.5 rounded transition-colors duration-300 ${barColor}`}
                     transition={{ duration: 0.15 }}
                 />
                 <motion.span
                     animate={open ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
-                    className="block w-5 h-0.5 bg-black rounded origin-center"
+                    className={`block w-5 h-0.5 rounded origin-center transition-colors duration-300 ${barColor}`}
                     transition={{ duration: 0.25 }}
                 />
             </button>
@@ -74,7 +73,7 @@ export default function MobileNav() {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.2 }}
                         onClick={() => setOpen(false)}
-                        className="fixed inset-0 z-40 bg-black/30 backdrop-blur-sm md:hidden"
+                        className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm md:hidden"
                     />
                 )}
             </AnimatePresence>
@@ -96,7 +95,7 @@ export default function MobileNav() {
                             <button
                                 onClick={() => setOpen(false)}
                                 aria-label="Close menu"
-                                className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-black/5 transition"
+                                className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-black/5 transition text-black"
                             >
                                 ✕
                             </button>
@@ -129,7 +128,7 @@ export default function MobileNav() {
                             })}
                         </ul>
 
-                        {/* CTA at bottom */}
+                        {/* CTA */}
                         <div className="p-4 border-t border-black/5">
                             <Link
                                 href="/contact"

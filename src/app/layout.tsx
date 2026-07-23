@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import MainContent from "@/components/MainContent";
 
 // Display font — headings only
 const architectsDaughter = Architects_Daughter({
@@ -37,7 +38,7 @@ export default function RootLayout({
         className={`${architectsDaughter.variable} ${poppins.variable} antialiased`}
       >
         <Header />
-        {children}
+        <MainContent>{children}</MainContent>
         <Footer />
         <WhatsAppButton />
       </body>
