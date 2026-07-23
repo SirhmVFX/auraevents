@@ -45,7 +45,7 @@ type PlanValue = true | false | string;
 function Cell({ value, plan }: { value: PlanValue; plan: string }) {
     const isHighlighted = plan === "signature";
     if (value === false) {
-        return <span className={`text-sm ${isHighlighted ? "text-white/30" : "text-black/20"}`}>—</span>;
+        return <span className={`text-sm ${isHighlighted ? "text-white/20" : "text-black/20"}`}>—</span>;
     }
     if (value === true) {
         return (
@@ -53,7 +53,7 @@ function Cell({ value, plan }: { value: PlanValue; plan: string }) {
                 }`}>✓</span>
         );
     }
-    return <span className={`text-xs font-semibold ${isHighlighted ? "text-white/80" : "text-black/70"}`}>{value}</span>;
+    return <span className={`text-xs font-semibold ${isHighlighted ? "text-black" : "text-black/70"}`}>{value}</span>;
 }
 
 export default function PackageComparison() {
@@ -69,7 +69,7 @@ export default function PackageComparison() {
         badge?: string;
     }[] = [
         { key: "essential", label: "Essentials", price: "From ₦750k", bg: "bg-white", text: "text-black", border: "border-black/10" },
-        { key: "signature", label: "Signature", price: "From ₦2.2M", bg: "bg-black", text: "text-white", border: "border-transparent", badge: "Most Popular" },
+        { key: "signature", label: "Signature", price: "From ₦2.2M", bg: "bg-black/10", text: "text-black", border: "border-transparent", badge: "Most Popular" },
         { key: "prestige", label: "Prestige", price: "Custom", bg: "bg-white", text: "text-black", border: "border-black/10" },
     ] as const;
 
@@ -91,7 +91,7 @@ export default function PackageComparison() {
                     <button
                         key={p.key}
                         onClick={() => setMobileTab(p.key)}
-                        className={`flex-1 rounded-xl py-2 text-xs font-bold transition ${mobileTab === p.key ? "bg-black text-white shadow" : "text-black/50"
+                        className={`flex-1 rounded-xl py-2 text-xs font-bold transition ${mobileTab === p.key ? "bg-black/10 text-white shadow" : "text-black/50"
                             }`}
                     >
                         {p.label}
@@ -138,7 +138,7 @@ export default function PackageComparison() {
                             >
                                 <div className="px-5 py-3.5 text-sm text-black/70 flex items-center">{item.label}</div>
                                 <div className="px-5 py-3.5 bg-white flex items-center"><Cell value={item.essential} plan="essential" /></div>
-                                <div className="px-5 py-3.5 bg-black flex items-center"><Cell value={item.signature} plan="signature" /></div>
+                                <div className="px-5 py-3.5 bg-black/10 text-black flex items-center"><Cell value={item.signature} plan="signature" /></div>
                                 <div className="px-5 py-3.5 bg-white flex items-center"><Cell value={item.prestige} plan="prestige" /></div>
                             </motion.div>
                         ))}
