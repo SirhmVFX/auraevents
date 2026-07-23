@@ -140,9 +140,9 @@ function Footer() {
           {/* Bottom: brand + policies */}
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between pt-8 gap-6">
             <div className="flex items-center gap-2">
-              <span className="text-5xl md:text-6xl font-semibold tracking-wide">
+              <h1 className="text-5xl md:text-6xl font-semibold tracking-wide">
                 Aura
-              </span>
+              </h1>
               <span className="text-white/60">®</span>
             </div>
             <div className="flex items-center gap-6 text-sm text-white/70">

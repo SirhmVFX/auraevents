@@ -39,8 +39,8 @@ function AnimatedNumber({ target, suffix }: { target: number; suffix: string }) 
 
 export default function Stats() {
     return (
-        <section className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 py-20">
-            <div className="rounded-3xl bg-black text-white px-8 py-14">
+        <section className="max-w-[1300px] mx-auto px-4 md:px-6 lg:px-8 py-20">
+            <div className="rounded-3xl border-2 border-gray-200 px-8 py-14">
                 <div className="text-center mb-12">
                     <p className="uppercase tracking-widest text-xs text-white/50 mb-2">By the numbers</p>
                     <h2 className="text-3xl md:text-5xl font-extrabold">Results that speak for themselves</h2>
