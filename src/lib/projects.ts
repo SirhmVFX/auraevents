@@ -28,7 +28,7 @@ export const projects: Project[] = [
     description:
       "A sunset waterfront ceremony with bespoke florals, live strings, and a candle‑lit reception under the stars.",
     cover:
-      "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?q=80&w=1600&auto=format&fit=crop",
+      "/assets/618734419_18385717156144083_6224141052345829499_n.jpg",
     services: ["Full Planning", "Design", "Vendor Management", "Production"],
     attendees: "250",
     budgetRange: "$$$$",
@@ -62,7 +62,7 @@ export const projects: Project[] = [
     description:
       "Immersive reveal with synchronized lighting, interactive demo pods, and press briefing lounge.",
     cover:
-      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1600&auto=format&fit=crop",
+      "/assets/d27f47175476347.64b4bfd28f760.jpg",
     services: ["Launch Strategy", "Stage Design", "AV", "Press"],
     attendees: "1,200",
     budgetRange: "$$$",
@@ -95,7 +95,7 @@ export const projects: Project[] = [
     description:
       "Three‑day offsite with strategy workshops, culinary experiences, and fireside networking.",
     cover:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop",
+      "/assets/7947ba175476347.64b4bfd2939b4.webp",
     services: ["Logistics", "Team Building", "Decor", "Hospitality"],
     attendees: "80",
     budgetRange: "$$$",
@@ -121,7 +121,7 @@ export const projects: Project[] = [
     description:
       "Pastel palette picnic with artisanal desserts, live acoustic set, and custom photo wall.",
     cover:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop",
+      "/assets/d1e63781d56ff5dafd3bac4920a3de5d.webp",
     services: ["Styling", "Catering", "Entertainment"],
     attendees: "40",
     budgetRange: "$$",
@@ -140,7 +140,7 @@ export const projects: Project[] = [
     description:
       "Black‑tie gala with LED stage backdrop, choreographed walk‑ups, and red carpet media wall.",
     cover:
-      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1600&auto=format&fit=crop",
+      "/assets/689268944_17927924511277421_266676219225589050_n.jpg",
     services: ["Stage Management", "Lighting", "Red Carpet"],
     attendees: "600",
     budgetRange: "$$$",
@@ -165,7 +165,7 @@ export const projects: Project[] = [
     description:
       "Colourful game booths, parade floats, and family picnic zones with roaming mascots.",
     cover:
-      "https://images.unsplash.com/photo-1464375117522-1311d2433b42?q=80&w=1600&auto=format&fit=crop",
+      "/assets/689268944_17927924469277421_3890191557793593040_n.jpg",
     services: ["Permits", "Logistics", "Vendors"],
     attendees: "1,800",
     budgetRange: "$$",
