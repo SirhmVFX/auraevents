@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function ServicesPageHero() {
     return (
-        <section className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 pt-16 pb-10">
+        <section className="page-wrap pt-20 md:pt-28 pb-12 md:pb-16">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -15,13 +15,13 @@ export default function ServicesPageHero() {
                 <div className="inline-flex items-center gap-2 rounded-full bg-gold-pale text-gold px-4 py-2 text-xs font-bold mb-6">
                     <span>✨</span> End-to-end event services
                 </div>
-                <h1 className="text-4xl md:text-7xl font-extrabold leading-tight mb-6">
+                <h1 className="text-4xl md:text-7xl font-extrabold leading-tight mb-8">
                     Every event type, <br />
                     <span className="bg-gradient-to-r from-[#7a6520] to-[#d4a853] bg-clip-text text-transparent">
                         one expert team
                     </span>
                 </h1>
-                <p className="text-black/60 max-w-xl mx-auto text-base md:text-lg mb-8">
+                <p className="text-black/60 max-w-xl mx-auto text-base md:text-lg mb-10 leading-relaxed">
                     We handle every type of event — from intimate celebrations to large-scale productions — with the same passion, precision, and creative flair.
                 </p>
                 <div className="flex items-center justify-center gap-3">

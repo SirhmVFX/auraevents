@@ -40,8 +40,8 @@ export const projects: Project[] = [
     ],
     beforeAfter: [
       {
-        before: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop",
-        after: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop",
+        before: "/assets/689268944_17927924469277421_3890191557793593040_n.jpg",
+        after: "/assets/688899482_17927924478277421_3063988593860540259_n.jpg",
         caption: "Venue transformation — empty hall to dream wedding reception",
       },
     ],
@@ -73,8 +73,8 @@ export const projects: Project[] = [
     ],
     beforeAfter: [
       {
-        before: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop",
-        after: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1200&auto=format&fit=crop",
+        before: "/assets/xiybr-ballroom-2995-hor-clsc.avif",
+        after: "/assets/xiybr-ballroom-2997-hor-clsc.avif",
         caption: "Stage transformation — bare convention floor to immersive launch set",
       },
     ],
@@ -238,8 +238,8 @@ export const projects: Project[] = [
     ],
     beforeAfter: [
       {
-        before: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop",
-        after: "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?q=80&w=1200&auto=format&fit=crop",
+        before: "/assets/618473071_18385717147144083_2263195303079306623_n.jpg",
+        after: "/assets/618429584_18385717207144083_1722596856171328132_n.jpg",
         caption: "Penthouse transformation — blank canvas to neo-tropical paradise",
       },
     ],

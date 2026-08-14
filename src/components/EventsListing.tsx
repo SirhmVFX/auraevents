@@ -26,7 +26,7 @@ export default function EventsListing() {
     return (
         <div>
             {/* Filters */}
-            <div className="flex flex-wrap items-center gap-2 mb-8">
+            <div className="flex flex-wrap items-center gap-2 mb-10">
                 {categories.map((c) => (
                     <button
                         key={c}
@@ -52,9 +52,9 @@ export default function EventsListing() {
 
             {/* Featured Events */}
             {featured.length > 0 && (
-                <div className="mb-10">
-                    <p className="text-xs font-bold uppercase tracking-widest text-black/40 mb-4">✨ Featured</p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="mb-12">
+                    <p className="text-xs font-bold uppercase tracking-widest text-black/40 mb-5">✨ Featured</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                         {featured.map((event, i) => (
                             <EventCard key={event.id} event={event} index={i} isFeatured />
                         ))}
@@ -68,7 +68,7 @@ export default function EventsListing() {
                     {featured.length > 0 && (
                         <p className="text-xs font-bold uppercase tracking-widest text-black/40 mb-4">All events</p>
                     )}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                         {rest.map((event, i) => (
                             <EventCard key={event.id} event={event} index={i} />
                         ))}
@@ -145,11 +145,11 @@ function EventCard({
                 </div>
 
                 {/* Content */}
-                <div className="p-5">
-                    <h2 className="font-extrabold text-lg leading-snug mb-2 group-hover:text-gold transition-colors">
+                <div className="p-6">
+                    <h2 className="font-extrabold text-lg leading-snug mb-3 group-hover:text-gold transition-colors">
                         {event.title}
                     </h2>
-                    <p className="text-sm text-black/60 line-clamp-2 mb-4">{event.description}</p>
+                    <p className="text-sm text-black/60 line-clamp-2 mb-5 leading-relaxed">{event.description}</p>
 
                     <div className="flex items-center gap-2 text-xs text-black/50 mb-4">
                         <span>📍 {event.venue}</span>

@@ -35,11 +35,11 @@ export default function PortfolioGallery() {
     };
 
     return (
-        <section className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 py-20">
+        <section className="page-wrap section-y">
             {/* Header */}
-            <div className="flex items-end justify-between mb-10">
+            <div className="flex items-end justify-between gap-6 mb-10 md:mb-14">
                 <div>
-                    <p className="uppercase tracking-widest text-xs text-black/40 mb-2">Portfolio</p>
+                    <p className="uppercase tracking-widest text-xs text-black/40 mb-3">Portfolio</p>
                     <h2 className="text-3xl md:text-5xl font-extrabold">
                         Work that speaks <br className="hidden md:block" />for itself
                     </h2>
@@ -73,7 +73,7 @@ export default function PortfolioGallery() {
             </div>
 
             {/* Filter tabs */}
-            <div className="flex flex-wrap gap-2 mb-8">
+            <div className="flex flex-wrap gap-2 mb-10">
                 {EVENT_TYPES.map((type) => (
                     <motion.button
                         key={type}
@@ -99,13 +99,13 @@ export default function PortfolioGallery() {
             <motion.div
                 ref={containerRef}
                 layout
-                className={`grid gap-4 ${view === "masonry"
+                className={`grid gap-5 md:gap-6 ${view === "masonry"
                     ? "grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
                     : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
                     }`}
             >
                 <AnimatePresence mode="popLayout">
-                    {filtered.map((project, i) => (
+                    {filtered.slice(0, 6).map((project, i) => (
                         <motion.div
                             key={project.id}
                             layout
@@ -169,7 +169,7 @@ export default function PortfolioGallery() {
             )}
 
             {/* View all CTA */}
-            <div className="text-center mt-10">
+            <div className="text-center mt-12 md:mt-14">
                 <Link
                     href="/projects"
                     className="inline-flex items-center gap-2 rounded-full border border-black/10 px-6 py-3 text-sm font-semibold hover:bg-black hover:text-white transition"

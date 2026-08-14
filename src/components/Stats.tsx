@@ -39,13 +39,13 @@ function AnimatedNumber({ target, suffix }: { target: number; suffix: string }) 
 
 export default function Stats() {
     return (
-        <section className="max-w-[1300px] mx-auto px-4 md:px-6 lg:px-8 py-20">
-            <div className="rounded-3xl  px-8 py-14">
-                <div className="text-center mb-12">
-                    <p className="uppercase tracking-widest text-xs text-white/50 mb-2">By the numbers</p>
+        <section className="page-wrap section-y">
+            <div className="rounded-3xl px-4 md:px-8">
+                <div className="text-center mb-12 md:mb-16">
+                    <p className="uppercase tracking-widest text-xs text-black/40 mb-3">By the numbers</p>
                     <h2 className="text-3xl md:text-5xl font-extrabold">Results that speak for themselves</h2>
                 </div>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-12">
                     {stats.map((s, i) => (
                         <motion.div
                             key={s.label}
@@ -55,11 +55,11 @@ export default function Stats() {
                             transition={{ duration: 0.45, delay: i * 0.08 }}
                             className="text-center"
                         >
-                            <div className="text-4xl mb-3">{s.icon}</div>
-                            <div className="text-4xl md:text-5xl font-extrabold text-black/20">
+                            <div className="text-3xl mb-4">{s.icon}</div>
+                            <div className="text-4xl md:text-5xl font-extrabold text-black">
                                 <AnimatedNumber target={s.value} suffix={s.suffix} />
                             </div>
-                            <p className="mt-2 text-sm text-white/60">{s.label}</p>
+                            <p className="mt-3 text-sm text-black/50">{s.label}</p>
                         </motion.div>
                     ))}
                 </div>

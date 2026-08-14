@@ -12,7 +12,7 @@ export default function MainContent({ children }: { children: React.ReactNode })
     const isHome = pathname === "/";
 
     return (
-        <main className={isHome ? "" : "pt-[68px]"}>
+        <main className={isHome ? "" : "pt-20"}>
             {children}
         </main>
     );

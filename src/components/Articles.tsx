@@ -74,8 +74,8 @@ function Articles() {
   ];
 
   return (
-    <section className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 py-16">
-      <div className="flex items-end justify-between mb-8">
+    <section className="page-wrap section-y">
+      <div className="flex items-end justify-between gap-6 mb-10 md:mb-14">
         <div>
           <p className="uppercase tracking-widest text-sm text-black/50">
             Insights
@@ -90,8 +90,8 @@ function Articles() {
         </Link>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {articles.map((a, i) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        {articles.slice(0, 3).map((a, i) => (
           <motion.article
             key={a.id}
             initial={{ y: 20, opacity: 0 }}
@@ -110,7 +110,7 @@ function Articles() {
             {/* Decorative gradient background */}
             <div className="pointer-events-none absolute -top-32 -right-20 h-56 w-56 rounded-full bg-gradient-to-tr from-gold/10 to-gold/20 blur-2xl group-hover:scale-110 transition-transform" />
 
-            <div className="p-5">
+            <div className="p-6 md:p-7">
               <div className="mb-3 flex items-center gap-2">
                 <span className="inline-flex items-center rounded-full bg-black/5 px-3 py-1 text-xs font-medium text-black/70">
                   {a.tag}
@@ -129,9 +129,9 @@ function Articles() {
                 </Link>
               </h3>
 
-              <p className="mt-2 text-sm text-black/70">{a.excerpt}</p>
+              <p className="mt-3 text-sm text-black/70 leading-relaxed">{a.excerpt}</p>
 
-              <div className="mt-5 flex items-center justify-between">
+              <div className="mt-6 flex items-center justify-between">
                 <Link
                   href={`/articles/${slugify(a.title)}`}
                   className="text-sm font-semibold text-black group/btn inline-flex items-center gap-2"

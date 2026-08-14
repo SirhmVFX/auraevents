@@ -75,9 +75,9 @@ function ContactFormInner() {
                 <motion.form
                     key="form"
                     onSubmit={handleSubmit}
-                    className="rounded-3xl bg-white border border-black/5 shadow-sm p-6 md:p-8 flex flex-col gap-5"
+                    className="rounded-3xl bg-white border border-black/5 shadow-sm p-7 md:p-10 flex flex-col gap-6"
                 >
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         {/* Name */}
                         <div className="flex flex-col gap-1.5">
                             <label className="text-xs font-bold text-black/60">Full Name *</label>
@@ -104,7 +104,7 @@ function ContactFormInner() {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         {/* Phone */}
                         <div className="flex flex-col gap-1.5">
                             <label className="text-xs font-bold text-black/60">Phone / WhatsApp</label>
@@ -133,7 +133,7 @@ function ContactFormInner() {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         {/* Date */}
                         <div className="flex flex-col gap-1.5">
                             <label className="text-xs font-bold text-black/60">Event Date</label>

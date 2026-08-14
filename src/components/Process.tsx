@@ -60,14 +60,14 @@ export default function Process() {
     const scaleY = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
     return (
-        <section className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 py-20">
-            <div className="text-center mb-16">
-                <p className="uppercase tracking-widest text-xs text-black/40 mb-2">How it works</p>
+        <section className="page-wrap section-y">
+            <div className="text-center mb-16 md:mb-20">
+                    <p className="uppercase tracking-widest text-xs text-black/40 mb-3">How it works</p>
                 <h2 className="text-3xl md:text-5xl font-extrabold">
                     From idea to iconic — <br className="hidden md:block" />
                     our 6-step process
                 </h2>
-                <p className="mt-4 text-black/60 max-w-lg mx-auto">
+                <p className="mt-4 text-black/60 max-w-lg mx-auto leading-relaxed">
                     A tried-and-tested framework that turns your vision into a flawlessly executed event, every single time.
                 </p>
             </div>
@@ -80,7 +80,7 @@ export default function Process() {
                     className="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-gold -translate-x-px hidden sm:block"
                 />
 
-                <div className="flex flex-col gap-12">
+                <div className="flex flex-col gap-14 md:gap-16">
                     {steps.map((s, i) => {
                         const isEven = i % 2 === 0;
                         return (
@@ -96,7 +96,7 @@ export default function Process() {
                                 {/* Card */}
                                 <div className={`flex-1 ${isEven ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
                                     <div
-                                        className={`inline-block rounded-3xl border border-black/5 bg-white shadow-sm p-6 max-w-md ${isEven ? "md:ml-auto" : ""
+                                        className={`inline-block rounded-3xl border border-black/5 bg-white shadow-sm p-6 md:p-8 max-w-md ${isEven ? "md:ml-auto" : ""
                                             }`}
                                     >
                                         <div className={`inline-flex w-12 h-12 rounded-2xl items-center justify-center text-2xl mb-4 ${s.color}`}>

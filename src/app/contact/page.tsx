@@ -20,19 +20,19 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
     return (
-        <main className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 py-16">
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
+        <main className="page-wrap page-y">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
                 {/* Left: info */}
                 <div className="lg:col-span-2">
-                    <p className="uppercase tracking-widest text-xs text-black/40 mb-3">Get in touch</p>
+                    <p className="uppercase tracking-widest text-xs text-black/40 mb-4">Get in touch</p>
                     <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
                         Let&apos;s create something <span className="text-gold">extraordinary</span>
                     </h1>
-                    <p className="text-black/60 leading-relaxed mb-8">
+                    <p className="text-black/60 leading-relaxed mb-10">
                         Tell us about your event. Whether you have a fully formed vision or just a feeling, our team will help shape it into something unforgettable.
                     </p>
 
-                    <div className="flex flex-col gap-6">
+                    <div className="flex flex-col gap-8">
                         <div className="flex items-start gap-4">
                             <div className="w-10 h-10 rounded-xl bg-gold-pale flex items-center justify-center text-lg flex-shrink-0">
                                 📍
@@ -84,7 +84,7 @@ export default function ContactPage() {
                     </div>
 
                     {/* Guarantee badge */}
-                    <div className="mt-10 rounded-2xl bg-black text-white p-5">
+                    <div className="mt-12 rounded-2xl bg-black text-white p-6">
                         <div className="text-2xl mb-2">🛡️</div>
                         <h3 className="font-extrabold mb-1">Our Promise</h3>
                         <p className="text-sm text-white/70 leading-relaxed">

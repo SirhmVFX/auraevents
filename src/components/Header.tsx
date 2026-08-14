@@ -36,7 +36,7 @@ function SparkleIcon() {
 }
 
 function Header() {
-  // pastHero = true once the user has scrolled past the hero section (400vh)
+  // pastHero = true once the user has scrolled past the hero
   const [pastHero, setPastHero] = useState(false);
   const pathname = usePathname();
 
@@ -44,12 +44,8 @@ function Header() {
   const isHome = pathname === "/";
 
   useEffect(() => {
-    const HERO_HEIGHT_VH = 4; // hero is (3 slides + 1 extraTail) * 100vh = 400vh
-
     const onScroll = () => {
-      const threshold = isHome
-        ? window.innerHeight * HERO_HEIGHT_VH
-        : 10; // on other pages, switch immediately on any scroll
+      const threshold = isHome ? window.innerHeight * 0.72 : 10;
       setPastHero(window.scrollY >= threshold);
     };
 
@@ -77,7 +73,7 @@ function Header() {
         : "bg-transparent"
         }`}
     >
-      <div className="max-w-[1200px] mx-auto p-2 md:p-4 flex gap-3 justify-between items-center">
+      <div className="max-w-[1200px] mx-auto px-4 md:px-6 py-3 md:py-4 flex gap-3 justify-between items-center">
 
         {/* Logo — white version on transparent header, black version when solid */}
         <div className="flex items-center gap-3">

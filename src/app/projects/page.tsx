@@ -56,13 +56,13 @@ export default function Projects() {
   };
 
   return (
-    <section className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 py-16">
+    <section className="page-wrap page-y">
       {/* Header */}
-      <div className="flex items-end justify-between mb-8">
+      <div className="flex items-end justify-between gap-6 mb-10 md:mb-12">
         <div>
           <p className="uppercase tracking-widest text-xs text-black/40 mb-2">Portfolio</p>
           <h1 className="text-3xl md:text-5xl font-extrabold">Past Projects</h1>
-          <p className="mt-2 text-black/50 text-sm max-w-lg">
+          <p className="mt-3 text-black/50 text-sm max-w-lg leading-relaxed">
             {projects.length} events executed across weddings, corporate, birthdays, galas, and activations.
           </p>
         </div>
@@ -77,7 +77,7 @@ export default function Projects() {
       </div>
 
       {/* Event type filter tabs */}
-      <div className="flex flex-wrap gap-2 mb-5">
+      <div className="flex flex-wrap gap-2 mb-8">
         {EVENT_TYPES.map((type) => (
           <button
             key={type}
@@ -92,7 +92,7 @@ export default function Projects() {
       </div>
 
       {/* Search + service filters */}
-      <div className="mb-6 grid grid-cols-1 lg:grid-cols-12 gap-3">
+      <div className="mb-8 grid grid-cols-1 lg:grid-cols-12 gap-5">
         <div className="lg:col-span-5">
           <input
             value={query}
@@ -125,7 +125,7 @@ export default function Projects() {
       </div>
 
       {/* Summary */}
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center justify-between mb-6">
         <p className="text-sm text-black/60">
           Showing <span className="font-semibold text-black">{shown.length}</span> of {filtered.length}
         </p>
@@ -133,7 +133,7 @@ export default function Projects() {
 
       {/* Grid view */}
       {viewMode === "grid" && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {shown.map((p, i) => (
             <motion.div
               key={p.id}
@@ -196,7 +196,7 @@ export default function Projects() {
 
       {/* List view */}
       {viewMode === "list" && (
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-4">
           {shown.map((p, i) => (
             <motion.div
               key={p.id}
@@ -233,7 +233,7 @@ export default function Projects() {
 
       {/* Pagination */}
       {canLoadMore && (
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-center mt-12">
           <button onClick={() => setVisible((v) => v + 6)} className="px-5 py-2 rounded-full bg-black text-white text-sm hover:opacity-90 transition">
             Load more ({filtered.length - visible} remaining)
           </button>

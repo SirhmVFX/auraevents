@@ -22,7 +22,7 @@ export default function EventBookingWidget({ event }: { event: EventItem }) {
     return (
         <div className="rounded-3xl border border-black/10 bg-white shadow-lg overflow-hidden">
             {/* Price header */}
-            <div className="bg-black text-white px-6 py-5">
+            <div className="bg-black text-white px-6 py-6">
                 <p className="text-white/50 text-xs mb-1">Price per ticket</p>
                 <p className="text-3xl font-extrabold">{event.price}</p>
                 {!soldOut && (
@@ -32,7 +32,7 @@ export default function EventBookingWidget({ event }: { event: EventItem }) {
                 )}
             </div>
 
-            <div className="p-6">
+            <div className="p-7">
                 <AnimatePresence mode="wait">
                     {step === "success" ? (
                         <motion.div

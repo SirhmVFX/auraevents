@@ -76,15 +76,15 @@ export default function Testimonials() {
     const t = testimonials[current];
 
     return (
-        <section className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 py-20">
-            <div className="text-center mb-12">
-                <p className="uppercase tracking-widest text-xs text-black/40 mb-2">Testimonials</p>
+        <section className="page-wrap section-y">
+            <div className="text-center mb-12 md:mb-16">
+                <p className="uppercase tracking-widest text-xs text-black/40 mb-3">Testimonials</p>
                 <h2 className="text-3xl md:text-5xl font-extrabold">
                     Clients who trusted us with their biggest moments
                 </h2>
             </div>
 
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-gold-pale to-[#f5e8b0] border border-gold/20 p-8 md:p-14 min-h-[320px]">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-gold-pale to-[#f5e8b0] border border-gold/20 p-8 md:p-16 min-h-[320px]">
                 {/* Quote mark */}
                 <div className="absolute top-8 left-8 text-gold/20 text-9xl font-serif leading-none select-none pointer-events-none">
                     &ldquo;
@@ -131,7 +131,7 @@ export default function Testimonials() {
             </div>
 
             {/* Dots navigation */}
-            <div className="flex justify-center gap-2 mt-6">
+            <div className="flex justify-center gap-2 mt-8">
                 {testimonials.map((_, i) => (
                     <button
                         key={i}

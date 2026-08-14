@@ -67,8 +67,8 @@ const plans = [
 
 export default function Pricing() {
     return (
-        <section className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 py-20" id="pricing">
-            <div className="text-center mb-12">
+        <section className="page-wrap section-y" id="pricing">
+            <div className="text-center mb-14 md:mb-16">
                 <p className="uppercase tracking-widest text-xs text-black/40 mb-2">Transparent pricing</p>
                 <h2 className="text-3xl md:text-5xl font-extrabold">
                     Invest in memories <br className="hidden md:block" />
@@ -79,7 +79,7 @@ export default function Pricing() {
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-start">
                 {plans.map((plan, i) => (
                     <motion.div
                         key={plan.name}
@@ -96,7 +96,7 @@ export default function Pricing() {
                             </div>
                         )}
 
-                        <div className={`px-6 py-8 ${plan.headerColor}`}>
+                        <div className={`px-7 py-9 ${plan.headerColor}`}>
                             <h3 className="text-2xl font-extrabold">{plan.name}</h3>
                             <div className="text-3xl font-extrabold mt-2">{plan.price}</div>
                             <p className={`text-sm mt-3 ${plan.color.includes("bg-black") ? "text-white/60" : "text-black/60"}`}>
@@ -104,8 +104,8 @@ export default function Pricing() {
                             </p>
                         </div>
 
-                        <div className="px-6 pb-8">
-                            <ul className="mt-4 space-y-3">
+                        <div className="px-7 pb-9">
+                            <ul className="mt-5 space-y-3.5">
                                 {plan.features.map((f) => (
                                     <li key={f} className="flex items-start gap-3 text-sm">
                                         <span className="text-green-400 mt-0.5 flex-shrink-0">✓</span>
@@ -122,7 +122,7 @@ export default function Pricing() {
 
                             <Link
                                 href="/contact?plan=essentials"
-                                className={`mt-8 flex items-center justify-center w-full py-3 rounded-xl font-bold text-sm transition ${plan.buttonClass}`}
+                                className={`mt-10 flex items-center justify-center w-full py-3 rounded-xl font-bold text-sm transition ${plan.buttonClass}`}
                             >
                                 Get started →
                             </Link>
@@ -131,7 +131,7 @@ export default function Pricing() {
                 ))}
             </div>
 
-            <p className="text-center text-sm text-black/40 mt-8">
+            <p className="text-center text-sm text-black/40 mt-12">
                 All prices are starting points. Final quotes depend on guest count, location, and scope.{" "}
                 <Link href="/contact" className="underline hover:text-black transition">
                     Let&apos;s talk →

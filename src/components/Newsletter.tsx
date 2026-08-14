@@ -17,13 +17,13 @@ export default function Newsletter() {
     };
 
     return (
-        <section className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 py-20">
+        <section className="page-wrap section-y">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.4 }}
                 transition={{ duration: 0.5 }}
-                className="relative overflow-hidden rounded-3xl bg-gradient-gold px-8 md:px-14 py-14 text-white text-center"
+                className="relative overflow-hidden rounded-3xl bg-gradient-gold px-8 md:px-16 py-16 md:py-20 text-white text-center"
             >
                 {/* Decorative blobs */}
                 <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-white/10 blur-3xl" />
@@ -34,7 +34,7 @@ export default function Newsletter() {
                     <h2 className="text-3xl md:text-5xl font-extrabold mb-4">
                         Level up your events game 🎯
                     </h2>
-                    <p className="text-white/80 max-w-lg mx-auto mb-8 text-sm md:text-base">
+                    <p className="text-white/80 max-w-lg mx-auto mb-10 text-sm md:text-base leading-relaxed">
                         Join 4,200+ event professionals getting weekly tips on planning, design, budgets, and vendor secrets — straight to your inbox. No fluff, just gold.
                     </p>
 

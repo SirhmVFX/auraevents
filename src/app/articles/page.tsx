@@ -28,10 +28,10 @@ export const metadata: Metadata = {
 
 export default function ArticlesIndexPage() {
   return (
-    <main className="max-w-[1100px] mx-auto px-4 md:px-6 lg:px-8 py-16">
-      <header className="mb-8">
-        <h1 className="text-3xl md:text-4xl font-extrabold">Articles</h1>
-        <p className="mt-2 text-black/70">
+    <main className="max-w-[1100px] mx-auto px-5 md:px-8 page-y">
+      <header className="mb-10 md:mb-14">
+        <h1 className="text-3xl md:text-5xl font-extrabold">Articles</h1>
+        <p className="mt-3 text-black/70 leading-relaxed">
           Expert resources to plan, launch, and optimize high‑impact events.
         </p>
       </header>

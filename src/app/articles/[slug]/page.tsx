@@ -100,28 +100,28 @@ export default function ArticlePage({ params }: any) {
   if (!a) return notFound();
 
   return (
-    <main className="max-w-[900px] mx-auto px-4 md:px-6 lg:px-8 py-16">
+    <main className="max-w-[900px] mx-auto px-5 md:px-8 page-y">
       <JsonLd slug={a.slug} />
 
-      <header className="mb-8">
+      <header className="mb-12">
         <p className="text-sm text-black/50">
           {new Date(a.date).toLocaleDateString()} • {a.readTime}
           <span className="mx-2">•</span>
           <Views slug={a.slug} />
         </p>
-        <h1 className="mt-2 text-3xl md:text-4xl font-extrabold">
+        <h1 className="mt-3 text-3xl md:text-5xl font-extrabold leading-tight">
           {a.heroTitle}
         </h1>
-        <p className="mt-2 text-black/70">{a.heroSubtitle}</p>
+        <p className="mt-4 text-black/70 leading-relaxed">{a.heroSubtitle}</p>
         <a
           href={a.ctaHref}
-          className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black text-white text-sm hover:opacity-90 transition"
+          className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black text-white text-sm hover:opacity-90 transition"
         >
           {a.ctaLabel} →
         </a>
       </header>
 
-      <article className="prose prose-neutral max-w-none">
+      <article className="prose prose-neutral max-w-none prose-p:leading-relaxed prose-headings:mt-10 prose-headings:mb-4">
         {a.paragraphs.map((p, i) => (
           <p key={i}>{p}</p>
         ))}
@@ -154,8 +154,8 @@ export default function ArticlePage({ params }: any) {
       </article>
 
       {a.related.length > 0 && (
-        <section className="mt-12">
-          <h3 className="text-xl font-bold mb-3">Related articles</h3>
+        <section className="mt-16">
+          <h3 className="text-xl font-bold mb-5">Related articles</h3>
           <ul className="list-disc list-inside">
             {a.related.map((slug) => {
               const r = articles.find((x) => x.slug === slug);

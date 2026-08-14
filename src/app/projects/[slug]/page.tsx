@@ -13,8 +13,8 @@ export default function ProjectDetail({ params }: any) {
   const related = getRelatedProjects(params.slug, 3);
 
   return (
-    <section className="max-w-[1100px] mx-auto px-4 md:px-6 lg:px-8 py-12">
-      <div className="mb-6 flex items-center justify-between gap-4">
+    <section className="max-w-[1100px] mx-auto px-5 md:px-8 page-y">
+      <div className="mb-8 flex items-center justify-between gap-4">
         <div>
           <p className="uppercase tracking-widest text-sm text-black/50">
             Project
@@ -43,15 +43,15 @@ export default function ProjectDetail({ params }: any) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
       </div>
 
-      <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
         <div className="md:col-span-2">
           <p className="text-black/70 leading-relaxed text-base">
             {project.description}
           </p>
 
-          <div className="mt-6">
-            <h3 className="text-lg font-semibold mb-3">Gallery</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+          <div className="mt-8">
+            <h3 className="text-lg font-semibold mb-4">Gallery</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {project.gallery.map((img, i) => (
                 <motion.div
                   key={img}
@@ -75,8 +75,8 @@ export default function ProjectDetail({ params }: any) {
         </div>
 
         <aside className="md:col-span-1">
-          <div className="rounded-2xl border border-black/5 bg-white p-4">
-            <dl className="space-y-2 text-sm">
+          <div className="rounded-2xl border border-black/5 bg-white p-6">
+            <dl className="space-y-3 text-sm">
               <div className="flex justify-between">
                 <dt className="text-black/60">Client</dt>
                 <dd className="font-medium">{project.client}</dd>
@@ -99,7 +99,7 @@ export default function ProjectDetail({ params }: any) {
               </div>
             </dl>
 
-            <div className="mt-4">
+            <div className="mt-6">
               <h4 className="text-sm font-semibold mb-2">Services</h4>
               <div className="flex flex-wrap gap-2">
                 {project.services.map((s) => (
@@ -118,9 +118,9 @@ export default function ProjectDetail({ params }: any) {
 
       {/* Related Projects */}
       {related.length > 0 && (
-        <div className="mt-12">
-          <h3 className="text-lg font-semibold mb-4">Related projects</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="mt-16">
+          <h3 className="text-lg font-semibold mb-6">Related projects</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {related.map((r, i) => (
               <motion.div
                 key={r.slug}

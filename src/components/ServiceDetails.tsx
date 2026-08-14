@@ -53,8 +53,8 @@ const services = [
 
 export default function ServiceDetails() {
     return (
-        <section className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 py-10">
-            <div className="flex flex-col gap-24">
+        <section className="page-wrap py-12 md:py-20">
+            <div className="flex flex-col gap-24 md:gap-32">
                 {services.map((service, i) => {
                     const isEven = i % 2 === 0;
                     return (
@@ -65,7 +65,7 @@ export default function ServiceDetails() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, amount: 0.2 }}
                             transition={{ duration: 0.5 }}
-                            className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${!isEven ? "lg:flex-row-reverse" : ""
+                            className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center ${!isEven ? "lg:flex-row-reverse" : ""
                                 }`}
                         >
                             {/* Image */}
@@ -88,10 +88,10 @@ export default function ServiceDetails() {
                                     <span className="text-xl">{service.icon}</span>
                                     {service.tagline}
                                 </div>
-                                <h2 className="text-3xl md:text-4xl font-extrabold mb-4">{service.title}</h2>
-                                <p className="text-black/60 leading-relaxed mb-6">{service.description}</p>
+                                <h2 className="text-3xl md:text-4xl font-extrabold mb-5">{service.title}</h2>
+                                <p className="text-black/60 leading-relaxed mb-8">{service.description}</p>
 
-                                <div className="grid grid-cols-2 gap-2 mb-6">
+                                <div className="grid grid-cols-2 gap-3 mb-8">
                                     {service.offerings.map((o) => (
                                         <div key={o} className="flex items-center gap-2 text-sm text-black/70">
                                             <span className="text-gold">✓</span>

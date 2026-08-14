@@ -40,8 +40,8 @@ const team = [
 
 export default function Team() {
     return (
-        <section className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 py-20">
-            <div className="text-center mb-12">
+        <section className="page-wrap section-y">
+            <div className="text-center mb-12 md:mb-16">
                 <p className="uppercase tracking-widest text-xs text-black/40 mb-2">Meet the team</p>
                 <h2 className="text-3xl md:text-5xl font-extrabold">
                     The people behind <br className="hidden md:block" />
@@ -52,7 +52,7 @@ export default function Team() {
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                 {team.map((member, i) => (
                     <motion.div
                         key={member.name}
@@ -75,7 +75,7 @@ export default function Team() {
                                 {member.emoji}
                             </div>
                         </div>
-                        <div className="p-5">
+                        <div className="p-6">
                             <h3 className="font-extrabold text-lg">{member.name}</h3>
                             <p className="text-xs text-gold font-semibold mb-2">{member.role}</p>
                             <p className="text-xs text-black/60 leading-relaxed">{member.bio}</p>

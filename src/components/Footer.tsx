@@ -21,11 +21,11 @@ function Footer() {
   };
 
   return (
-    <div className="p-4">
-      <footer className="bg-black text-white/90 mt-16 rounded-lg">
-        <div className="max-w-[1200px] mx-auto px-4 md:px-6 py-8 md:py-12">
+    <div className="px-4 md:px-6 pb-6">
+      <footer className="bg-black text-white/90 mt-8 md:mt-12 rounded-2xl">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-10 py-12 md:py-16">
           {/* Top: nav + email */}
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 pb-6 border-b border-white/15">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 pb-8 border-b border-white/15">
             <nav className="text-sm">
               <ul className="flex flex-wrap items-center gap-4 text-white/80">
                 <li>
@@ -85,7 +85,7 @@ function Footer() {
           </div>
 
           {/* Middle: addresses + socials */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 py-8 border-b border-white/15">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14 py-10 border-b border-white/15">
             <div>
               <h3 className="font-semibold mb-2">Lagos HQ</h3>
               <address className="not-italic text-sm text-white/70 leading-relaxed">
@@ -138,7 +138,7 @@ function Footer() {
           </div>
 
           {/* Bottom: brand + policies */}
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between pt-8 gap-6">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between pt-10 gap-6">
             <div className="flex items-center gap-2">
               <h1 className="text-5xl md:text-6xl font-semibold tracking-wide">
                 Aura

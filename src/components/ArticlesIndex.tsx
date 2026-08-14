@@ -57,7 +57,7 @@ export default function ArticlesIndex({ articles }: { articles: Article[] }) {
 
   return (
     <div>
-      <div className="flex flex-col md:flex-row gap-3 md:items-center md:justify-between mb-6">
+      <div className="flex flex-col md:flex-row gap-4 md:items-center md:justify-between mb-10">
         <div className="flex-1">
           <input
             value={q}
@@ -83,24 +83,24 @@ export default function ArticlesIndex({ articles }: { articles: Article[] }) {
         </div>
       </div>
 
-      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         {filtered.map((a) => (
           <li
             key={a.slug}
-            className="rounded-2xl border border-black/5 bg-white/70 backdrop-blur p-5 hover:shadow-md transition-shadow"
+            className="rounded-2xl border border-black/5 bg-white/70 backdrop-blur p-6 hover:shadow-md transition-shadow"
           >
             <p className="text-xs text-black/50">
               {new Date(a.date).toLocaleDateString()} • {a.readTime}
             </p>
-            <h2 className="mt-1 text-lg font-bold">
+            <h2 className="mt-2 text-lg font-bold">
               <Link className="hover:underline" href={`/articles/${a.slug}`}>
                 {a.title}
               </Link>
             </h2>
-            <p className="mt-2 text-sm text-black/70 line-clamp-3">
+            <p className="mt-3 text-sm text-black/70 line-clamp-3 leading-relaxed">
               {a.metaDescription}
             </p>
-            <div className="mt-4 flex items-center justify-between">
+            <div className="mt-5 flex items-center justify-between">
               <span className="text-xs text-black/50">{getCategory(a)}</span>
               <Link
                 className="inline-flex items-center gap-1 text-sm font-semibold hover:underline"

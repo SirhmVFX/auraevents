@@ -5,14 +5,14 @@ import { motion } from "framer-motion";
 
 function Cta() {
   return (
-    <section className="max-w-[900px] mx-auto px-4 md:px-6 lg:px-8 py-20 text-center">
+    <section className="max-w-[900px] mx-auto px-5 md:px-8 section-y text-center">
       {/* Icon badge */}
       <motion.div
         initial={{ y: 8, opacity: 0, scale: 0.95 }}
         whileInView={{ y: 0, opacity: 1, scale: 1 }}
         viewport={{ once: true, amount: 0.6 }}
         transition={{ duration: 0.4 }}
-        className="mx-auto mb-6 h-14 w-14 rounded-2xl bg-gradient-gold shadow-[0_10px_30px_-10px_rgba(184,146,10,0.7)] flex items-center justify-center"
+        className="mx-auto mb-8 h-14 w-14 rounded-2xl bg-gradient-gold shadow-[0_10px_30px_-10px_rgba(184,146,10,0.7)] flex items-center justify-center"
         aria-hidden
       >
         {/* chain/link icon */}
@@ -48,7 +48,7 @@ function Cta() {
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true, amount: 0.6 }}
         transition={{ duration: 0.45, delay: 0.1 }}
-        className="mt-3 text-base md:text-lg text-black/60 max-w-[620px] mx-auto"
+        className="mt-5 text-base md:text-lg text-black/60 max-w-[620px] mx-auto leading-relaxed"
       >
         Tell us your vision and we&apos;d make it our canvas{" "}
         <span className="font-semibold text-black">Aura</span> today. Sign up
@@ -61,7 +61,7 @@ function Cta() {
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true, amount: 0.6 }}
         transition={{ duration: 0.45, delay: 0.15 }}
-        className="mt-7 flex items-center justify-center gap-3"
+        className="mt-10 flex items-center justify-center gap-3"
       >
         <Link
           href="/contact?type=demo"

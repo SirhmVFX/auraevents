@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const partners = [
-    { name: "Eko Hotel", category: "Venue", initials: "EK", color: "bg-stone-100" },
+    { name: "Eko Hotel", category: "Venue", initials: "EK", color: "bg-stone-100", img: "/assets/" },
     { name: "The Wheatbaker", category: "Venue", initials: "WB", color: "bg-amber-100" },
     { name: "Civic Centre Lagos", category: "Venue", initials: "CC", color: "bg-blue-100" },
     { name: "Landmark Centre", category: "Venue", initials: "LC", color: "bg-teal-100" },
@@ -37,9 +37,9 @@ function PartnerCard({ p }: { p: typeof partners[0] }) {
 
 export default function VendorPartners() {
     return (
-        <section className="py-20 overflow-hidden">
-            <div className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 mb-10 text-center">
-                <p className="uppercase tracking-widest text-xs text-black/40 mb-2">Trusted partners</p>
+        <section className="section-y overflow-hidden">
+            <div className="page-wrap mb-12 md:mb-14 text-center">
+                <p className="uppercase tracking-widest text-xs text-black/40 mb-3">Trusted partners</p>
                 <h2 className="text-3xl md:text-4xl font-extrabold">
                     Connected to Lagos&apos;s finest
                 </h2>
@@ -73,7 +73,7 @@ export default function VendorPartners() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4 }}
-                className="text-center mt-10"
+                className="text-center mt-12 md:mt-14"
             >
                 <p className="text-sm text-black/40">
                     Are you a vendor? {" "}

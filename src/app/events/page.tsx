@@ -20,12 +20,12 @@ export const metadata: Metadata = {
 
 export default function EventsPage() {
     return (
-        <main className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 py-16">
-            <div className="flex items-end justify-between mb-8">
+        <main className="page-wrap page-y">
+            <div className="flex items-end justify-between gap-6 mb-10 md:mb-12">
                 <div>
                     <p className="uppercase tracking-widest text-xs text-black/40 mb-2">What&apos;s on</p>
                     <h1 className="text-3xl md:text-5xl font-extrabold">Upcoming Events</h1>
-                    <p className="mt-2 text-black/60 max-w-lg">
+                    <p className="mt-3 text-black/60 max-w-lg leading-relaxed">
                         Masterclasses, galas, workshops, and exclusive experiences. Book your spot before they sell out.
                     </p>
                 </div>

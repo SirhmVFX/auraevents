@@ -20,12 +20,12 @@ export default function AboutHero() {
                 <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent" />
             </div>
 
-            <div className="relative z-10 max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 py-24 text-white">
+            <div className="relative z-10 page-wrap py-28 md:py-36 text-white">
                 <motion.p
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="uppercase tracking-widest text-xs text-white/60 mb-4"
+                    className="uppercase tracking-widest text-xs text-white/60 mb-5"
                 >
                     Est. 2012 · Lagos, Nigeria
                 </motion.p>
@@ -44,7 +44,7 @@ export default function AboutHero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.55, delay: 0.1 }}
-                    className="mt-6 max-w-lg text-white/70 text-base md:text-lg leading-relaxed"
+                    className="mt-7 max-w-lg text-white/70 text-base md:text-lg leading-relaxed"
                 >
                     Aura Events is a full-service event planning and production company. From intimate celebrations to 10,000-person conferences — we craft experiences that move people.
                 </motion.p>
@@ -53,7 +53,7 @@ export default function AboutHero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.55, delay: 0.15 }}
-                    className="mt-8 flex gap-3"
+                    className="mt-10 flex flex-wrap gap-3"
                 >
                     <Link
                         href="/contact"

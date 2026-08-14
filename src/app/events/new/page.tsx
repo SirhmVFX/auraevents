@@ -12,12 +12,12 @@ export const metadata: Metadata = {
 
 export default function NewEventPage() {
     return (
-        <main className="max-w-[900px] mx-auto px-4 md:px-6 lg:px-8 py-16">
-            <div className="text-center mb-12">
+        <main className="max-w-[900px] mx-auto px-5 md:px-8 page-y">
+            <div className="text-center mb-14">
                 <div className="inline-flex items-center gap-2 rounded-full bg-gold-pale text-gold px-4 py-2 text-xs font-bold mb-4">
                     🎉 Partner with us
                 </div>
-                <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+                <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-5">
                     Host your event with Aura
                 </h1>
                 <p className="text-black/60 max-w-lg mx-auto">
@@ -26,7 +26,7 @@ export default function NewEventPage() {
             </div>
 
             {/* Benefits row */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 mb-14">
                 {[
                     { icon: "🎯", label: "Expert planning" },
                     { icon: "📣", label: "Free promotion" },

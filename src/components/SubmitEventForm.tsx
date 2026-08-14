@@ -72,7 +72,7 @@ export default function SubmitEventForm() {
                 <motion.form
                     key="form"
                     onSubmit={handleSubmit}
-                    className="rounded-3xl bg-white border border-black/5 shadow-sm p-6 md:p-10 flex flex-col gap-6"
+                    className="rounded-3xl bg-white border border-black/5 shadow-sm p-7 md:p-10 flex flex-col gap-6"
                 >
                     {/* Contact info */}
                     <div>
