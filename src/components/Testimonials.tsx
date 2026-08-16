@@ -84,7 +84,7 @@ export default function Testimonials() {
                 </h2>
             </div>
 
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-gold-pale to-[#f5e8b0] border border-gold/20 p-8 md:p-16 min-h-[320px]">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-gold-pale to-[#f5e8b0] dark:to-[#3a3218] border border-gold/20 p-8 md:p-16 min-h-[320px]">
                 {/* Quote mark */}
                 <div className="absolute top-8 left-8 text-gold/20 text-9xl font-serif leading-none select-none pointer-events-none">
                     &ldquo;

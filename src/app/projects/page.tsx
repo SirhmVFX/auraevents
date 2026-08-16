@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { projects } from "@/lib/projects";
 import { useMemo, useState } from "react";
+import BeforeAfter from "@/components/BeforeAfter";
 
 const EVENT_TYPES = ["All", "Wedding", "Corporate", "Birthday", "Gala", "Activation", "Conference", "Social"];
 
@@ -56,6 +57,7 @@ export default function Projects() {
   };
 
   return (
+    <>
     <section className="page-wrap page-y">
       {/* Header */}
       <div className="flex items-end justify-between gap-6 mb-10 md:mb-12">
@@ -249,5 +251,7 @@ export default function Projects() {
         </div>
       )}
     </section>
+    <BeforeAfter />
+    </>
   );
 }

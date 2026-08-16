@@ -51,7 +51,7 @@ function Cta() {
         className="mt-5 text-base md:text-lg text-black/60 max-w-[620px] mx-auto leading-relaxed"
       >
         Tell us your vision and we&apos;d make it our canvas{" "}
-        <span className="font-semibold text-black">Aura</span> today. Sign up
+        <span className="font-semibold text-foreground">Aura</span> today. Sign up
         for a free trial.
       </motion.p>
 

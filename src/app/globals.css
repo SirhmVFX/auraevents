@@ -1,19 +1,41 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --card: #ffffff;
+  --muted: rgba(23, 23, 23, 0.58);
+  --border: rgba(0, 0, 0, 0.08);
   /* Brand gold — from Obsidian card */
   --gold: #b8920a;
   --gold-dark: #7a6520;
   --gold-light: #d4a853;
   --gold-pale: #fdf6e3;
   --gold-muted: #e8c96a;
+  color-scheme: light;
+}
+
+html.dark {
+  --background: #0c0c0c;
+  --foreground: #f3f3f3;
+  --card: #161616;
+  --muted: rgba(243, 243, 243, 0.62);
+  --border: rgba(255, 255, 255, 0.1);
+  --gold: #d4a853;
+  --gold-dark: #b8920a;
+  --gold-pale: #2a2412;
+  --gold-muted: #8a7430;
+  color-scheme: dark;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
   --font-display: var(--font-display);
   --font-body: var(--font-body);
   --color-gold: var(--gold);
@@ -21,13 +43,6 @@
   --color-gold-light: var(--gold-light);
   --color-gold-pale: var(--gold-pale);
   --color-gold-muted: var(--gold-muted);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 /* ── Typography ──────────────────────────────────────────────────── */
@@ -45,6 +60,9 @@ body {
   font-family: var(--font-body), system-ui, sans-serif;
   font-weight: 400;
   line-height: 1.7;
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Shared page / section rhythm */
@@ -156,7 +174,9 @@ h6 {
 .input-base {
   width: 100%;
   border-radius: 0.75rem;
-  border: 1px solid rgba(0, 0, 0, 0.10);
+  border: 1px solid var(--border);
+  background-color: var(--card);
+  color: var(--foreground);
   padding: 0.75rem 1rem;
   font-family: var(--font-body), system-ui, sans-serif;
   font-size: 0.875rem;
@@ -210,4 +230,83 @@ html {
   to {
     transform: translateX(0);
   }
+}
+
+/* ── Dark mode remaps for existing black/white utilities ─────────── */
+html.dark .bg-white:not([class*="bg-white/"]) {
+  background-color: var(--card);
+}
+
+html.dark .text-black {
+  color: var(--foreground);
+}
+
+html.dark .text-black\/20 { color: rgb(243 243 243 / 0.22); }
+html.dark .text-black\/25 { color: rgb(243 243 243 / 0.28); }
+html.dark .text-black\/30 { color: rgb(243 243 243 / 0.32); }
+html.dark .text-black\/40 { color: rgb(243 243 243 / 0.42); }
+html.dark .text-black\/50 { color: rgb(243 243 243 / 0.52); }
+html.dark .text-black\/60 { color: rgb(243 243 243 / 0.62); }
+html.dark .text-black\/70 { color: rgb(243 243 243 / 0.72); }
+html.dark .text-black\/80 { color: rgb(243 243 243 / 0.82); }
+
+html.dark .bg-white\/90 {
+  color: #171717;
+}
+
+html.dark .border-black { border-color: var(--foreground); }
+html.dark .border-black\/5 { border-color: rgb(255 255 255 / 0.08); }
+html.dark .border-black\/10 { border-color: rgb(255 255 255 / 0.12); }
+html.dark .hover\:border-black\/30:hover { border-color: rgb(255 255 255 / 0.32); }
+
+html.dark .bg-black\/3 { background-color: rgb(255 255 255 / 0.04); }
+html.dark .bg-black\/5 { background-color: rgb(255 255 255 / 0.06); }
+html.dark .bg-black\/8 { background-color: rgb(255 255 255 / 0.08); }
+html.dark .bg-black\/10 { background-color: rgb(255 255 255 / 0.1); }
+html.dark .bg-black\/15 { background-color: rgb(255 255 255 / 0.15); }
+html.dark .hover\:bg-black\/5:hover { background-color: rgb(255 255 255 / 0.06); }
+
+html.dark .ring-black\/5 { --tw-ring-color: rgb(255 255 255 / 0.1); }
+html.dark .focus\:ring-black\/10:focus { --tw-ring-color: rgb(255 255 255 / 0.16); }
+
+html.dark .from-white {
+  --tw-gradient-from: var(--background);
+  --tw-gradient-to: transparent;
+}
+
+/* Logo tiles stay white in both themes so marks remain readable */
+.logo-tile {
+  background-color: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+html.dark .logo-tile {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18), 0 8px 18px rgba(0, 0, 0, 0.4);
+}
+
+html.dark .logo-mark,
+.logo-on-hero {
+  filter: invert(1);
+}
+
+/* Solid black CTAs invert in dark mode; overlays/footers stay black */
+html.dark :is(a, button).bg-black:not([class*="bg-black/"]) {
+  background-color: var(--foreground);
+  color: var(--background);
+}
+
+html.dark :is(a, button).bg-black:not([class*="bg-black/"]):hover {
+  color: var(--background);
+}
+
+html.dark .prose {
+  color: var(--foreground);
+}
+
+html.dark input,
+html.dark textarea,
+html.dark select {
+  background-color: var(--card);
+  color: var(--foreground);
+  border-color: var(--border);
 }

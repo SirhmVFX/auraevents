@@ -4,6 +4,8 @@ import Cta from "@/components/Cta";
 import ServicesPageHero from "@/components/ServicesPageHero";
 import ServiceDetails from "@/components/ServiceDetails";
 import Process from "@/components/Process";
+import MoodboardBuilder from "@/components/MoodboardBuilder";
+import PackageComparison from "@/components/PackageComparison";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://aura.example";
 
@@ -27,8 +29,10 @@ export default function ServicesPage() {
         <main>
             <ServicesPageHero />
             <ServiceDetails />
+            <MoodboardBuilder />
             <Process />
             <Pricing />
+            <PackageComparison />
             <Cta />
         </main>
     );

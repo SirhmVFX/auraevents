@@ -59,7 +59,7 @@ export default function AvailabilityCalendar() {
     };
 
     return (
-        <section className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 py-20" id="availability">
+        <section className="page-wrap section-y" id="availability">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 {/* Left: copy */}
                 <div>

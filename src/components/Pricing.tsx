@@ -27,7 +27,7 @@ const plans = [
         price: "From $4,500",
         tag: "Most Popular",
         description: "Our most loved package. Full-service planning with creative direction and hands-on execution.",
-        color: "bg-black text-white",
+        color: "bg-foreground text-background",
         headerColor: "bg-white/10",
         buttonClass: "bg-gold text-white hover:bg-gold-dark",
         features: [
@@ -99,7 +99,7 @@ export default function Pricing() {
                         <div className={`px-7 py-9 ${plan.headerColor}`}>
                             <h3 className="text-2xl font-extrabold">{plan.name}</h3>
                             <div className="text-3xl font-extrabold mt-2">{plan.price}</div>
-                            <p className={`text-sm mt-3 ${plan.color.includes("bg-black") ? "text-white/60" : "text-black/60"}`}>
+                            <p className={`text-sm mt-3 ${plan.color.includes("bg-foreground") ? "text-background/60" : "text-black/60"}`}>
                                 {plan.description}
                             </p>
                         </div>
@@ -109,7 +109,7 @@ export default function Pricing() {
                                 {plan.features.map((f) => (
                                     <li key={f} className="flex items-start gap-3 text-sm">
                                         <span className="text-green-400 mt-0.5 flex-shrink-0">✓</span>
-                                        <span className={plan.color.includes("bg-black") ? "text-white/80" : "text-black/70"}>{f}</span>
+                                        <span className={plan.color.includes("bg-foreground") ? "text-background/80" : "text-black/70"}>{f}</span>
                                     </li>
                                 ))}
                                 {plan.notIncluded.map((f) => (

@@ -8,11 +8,13 @@ import Newsletter from "@/components/Newsletter";
 import Process from "@/components/Process";
 import PortfolioGallery from "@/components/PortfolioGallery";
 import VendorPartners from "@/components/VendorPartners";
+import BudgetEstimator from "@/components/BudgetEstimator";
 
 export default function Home() {
   return (
     <div className="w-full">
       <Herosection />
+      <BudgetEstimator />
       <Stats />
       <ServicesGrid />
       <PortfolioGallery />

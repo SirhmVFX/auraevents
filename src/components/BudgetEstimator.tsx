@@ -155,7 +155,7 @@ export default function BudgetEstimator() {
     const maxVal = Math.max(breakdown.venue, breakdown.production, breakdown.decor, breakdown.catering, breakdown.planning);
 
     return (
-        <section className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 py-20" id="estimator">
+        <section className="page-wrap section-y" id="estimator">
             <div className="text-center mb-12">
                 <p className="uppercase tracking-widest text-xs text-black/40 mb-2">Budget Estimator</p>
                 <h2 className="text-3xl md:text-5xl font-extrabold">

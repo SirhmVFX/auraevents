@@ -24,7 +24,7 @@ export default function ServicesPageHero() {
                 <p className="text-black/60 max-w-xl mx-auto text-base md:text-lg mb-10 leading-relaxed">
                     We handle every type of event — from intimate celebrations to large-scale productions — with the same passion, precision, and creative flair.
                 </p>
-                <div className="flex items-center justify-center gap-3">
+                <div className="flex items-center justify-center gap-3 flex-wrap">
                     <Link
                         href="/contact"
                         className="rounded-full bg-black text-white px-6 py-3 font-bold text-sm hover:opacity-90 transition"
@@ -36,6 +36,12 @@ export default function ServicesPageHero() {
                         className="rounded-full border border-black/10 text-black px-6 py-3 font-semibold text-sm hover:bg-black/5 transition"
                     >
                         See pricing
+                    </Link>
+                    <Link
+                        href="#moodboard"
+                        className="rounded-full border border-black/10 text-black px-6 py-3 font-semibold text-sm hover:bg-black/5 transition"
+                    >
+                        Build a moodboard
                     </Link>
                 </div>
             </motion.div>

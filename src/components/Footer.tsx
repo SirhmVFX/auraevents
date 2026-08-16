@@ -57,6 +57,11 @@ function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <Link className="hover:text-white transition" href="/#estimator">
+                    Budget estimator
+                  </Link>
+                </li>
+                <li>
                   <Link className="hover:text-white transition" href="/articles">
                     Articles
                   </Link>

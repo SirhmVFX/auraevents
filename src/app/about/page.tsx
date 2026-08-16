@@ -4,6 +4,7 @@ import Stats from "@/components/Stats";
 import Process from "@/components/Process";
 import Cta from "@/components/Cta";
 import AboutHero from "@/components/AboutHero";
+import MemberRewards from "@/components/MemberRewards";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://aura.example";
 
@@ -65,6 +66,7 @@ export default function AboutPage() {
             </section>
 
             <Team />
+            <MemberRewards />
             <Process />
             <Cta />
         </main>

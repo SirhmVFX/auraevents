@@ -15,6 +15,7 @@ import {
 } from "./Icons";
 import { usePathname } from "next/navigation";
 import MobileNav from "./MobileNav";
+import ThemeToggle from "./ThemeToggle";
 
 function SparkleIcon() {
   return (
@@ -69,21 +70,22 @@ function Header() {
   return (
     <header
       className={`fixed top-0 z-50 w-full transition-all duration-500 ${isSolid
-        ? "bg-white shadow-sm"
+        ? "bg-background/95 backdrop-blur-md shadow-sm"
         : "bg-transparent"
         }`}
     >
       <div className="max-w-[1200px] mx-auto px-4 md:px-6 py-3 md:py-4 flex gap-3 justify-between items-center">
 
-        {/* Logo — white version on transparent header, black version when solid */}
+        {/* Logo — inverted on transparent hero (and in dark mode) so it stays visible */}
         <div className="flex items-center gap-3">
           <Link href="/" className="w-[110px] md:w-[85px] inline-block">
             <Image
-              src={isSolid ? "/assets/aurablack.png" : "/assets/aurawhite.png"}
+              src="/assets/aurablack.png"
               alt="Aura Events Logo"
               width={1000}
               height={1000}
               priority
+              className={`logo-mark transition duration-500 ${!isSolid ? "logo-on-hero" : ""}`}
             />
           </Link>
         </div>
@@ -100,10 +102,10 @@ function Header() {
                     aria-current={isActive ? "page" : undefined}
                     className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold transition-all ${isActive
                       ? isSolid
-                        ? "bg-black text-white"
+                        ? "bg-foreground text-background"
                         : "bg-white/20 text-white backdrop-blur-sm"
                       : isSolid
-                        ? "text-black hover:bg-black/5"
+                        ? "text-foreground hover:bg-foreground/5"
                         : "text-white hover:bg-white/15"
                       }`}
                   >
@@ -120,9 +122,10 @@ function Header() {
 
         {/* Right: socials + CTA (desktop) */}
         <div
-          className={`hidden md:flex justify-end items-center gap-3 transition-colors duration-500 ${isSolid ? "text-black" : "text-white"
+          className={`hidden md:flex justify-end items-center gap-3 transition-colors duration-500 ${isSolid ? "text-foreground" : "text-white"
             }`}
         >
+          <ThemeToggle lightOnTransparent={!isSolid} />
           <a
             href="https://www.instagram.com"
             target="_blank"
@@ -153,7 +156,7 @@ function Header() {
           <Link
             href="/contact"
             className={`ml-2 inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold transition ${isSolid
-              ? "bg-black text-white hover:opacity-90"
+              ? "bg-foreground text-background hover:opacity-90"
               : "bg-white text-black hover:bg-white/90"
               }`}
           >
@@ -162,7 +165,8 @@ function Header() {
         </div>
 
         {/* Mobile hamburger */}
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-1">
+          <ThemeToggle lightOnTransparent={!isSolid} />
           <MobileNav isSolid={isSolid} />
         </div>
       </div>

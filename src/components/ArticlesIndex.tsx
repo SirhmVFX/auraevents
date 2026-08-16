@@ -87,7 +87,7 @@ export default function ArticlesIndex({ articles }: { articles: Article[] }) {
         {filtered.map((a) => (
           <li
             key={a.slug}
-            className="rounded-2xl border border-black/5 bg-white/70 backdrop-blur p-6 hover:shadow-md transition-shadow"
+            className="rounded-2xl border border-black/5 bg-card backdrop-blur p-6 hover:shadow-md transition-shadow"
           >
             <p className="text-xs text-black/50">
               {new Date(a.date).toLocaleDateString()} • {a.readTime}

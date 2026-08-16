@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import MainContent from "@/components/MainContent";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 // Display font — headings only
 const architectsDaughter = Architects_Daughter({
@@ -33,14 +34,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('aura-theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}}catch(e){}})();`,
+          }}
+        />
+      </head>
       <body
-        className={`${architectsDaughter.variable} ${poppins.variable} antialiased`}
+        className={`${architectsDaughter.variable} ${poppins.variable} antialiased bg-background text-foreground`}
       >
-        <Header />
-        <MainContent>{children}</MainContent>
-        <Footer />
-        <WhatsAppButton />
+        <ThemeProvider>
+          <Header />
+          <MainContent>{children}</MainContent>
+          <Footer />
+          <WhatsAppButton />
+        </ThemeProvider>
       </body>
     </html>
   );

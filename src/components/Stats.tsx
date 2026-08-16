@@ -56,7 +56,7 @@ export default function Stats() {
                             className="text-center"
                         >
                             <div className="text-3xl mb-4">{s.icon}</div>
-                            <div className="text-4xl md:text-5xl font-extrabold text-black">
+                            <div className="text-4xl md:text-5xl font-extrabold text-foreground">
                                 <AnimatedNumber target={s.value} suffix={s.suffix} />
                             </div>
                             <p className="mt-3 text-sm text-black/50">{s.label}</p>

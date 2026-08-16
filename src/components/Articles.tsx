@@ -99,7 +99,7 @@ function Articles() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.4, delay: i * 0.05 }}
             whileHover={{ y: -6 }}
-            className="group relative overflow-hidden rounded-2xl border border-gold/30/5 bg-white/70 backdrop-blur shadow-sm hover:shadow-xl transition-shadow"
+            className="group relative overflow-hidden rounded-2xl border border-gold/20 bg-card backdrop-blur shadow-sm hover:shadow-xl transition-shadow"
           >
             {/** Full-card clickable overlay */}
             <Link

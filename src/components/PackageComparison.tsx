@@ -74,7 +74,7 @@ export default function PackageComparison() {
     ] as const;
 
     return (
-        <section className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 py-20" id="packages">
+        <section className="page-wrap section-y" id="packages">
             <div className="text-center mb-12">
                 <p className="uppercase tracking-widest text-xs text-black/40 mb-2">Package comparison</p>
                 <h2 className="text-3xl md:text-5xl font-extrabold">

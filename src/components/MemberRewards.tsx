@@ -82,7 +82,7 @@ function CardDots() {
 
 export default function MemberRewards() {
     return (
-        <section className="bg-[#0d0d0d] text-white py-20 px-4 md:px-8">
+        <section className="bg-[#0d0d0d] text-white section-y px-4 md:px-8">
             <div className="max-w-[1200px] mx-auto">
 
                 {/* Header row */}

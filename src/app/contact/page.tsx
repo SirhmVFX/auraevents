@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+import AvailabilityCalendar from "@/components/AvailabilityCalendar";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://aura.example";
 
@@ -20,7 +21,8 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
     return (
-        <main className="page-wrap page-y">
+        <main>
+        <div className="page-wrap page-y">
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
                 {/* Left: info */}
                 <div className="lg:col-span-2">
@@ -28,9 +30,15 @@ export default function ContactPage() {
                     <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
                         Let&apos;s create something <span className="text-gold">extraordinary</span>
                     </h1>
-                    <p className="text-black/60 leading-relaxed mb-10">
+                    <p className="text-black/60 leading-relaxed mb-5">
                         Tell us about your event. Whether you have a fully formed vision or just a feeling, our team will help shape it into something unforgettable.
                     </p>
+                    <a
+                        href="#availability"
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-gold-dark transition mb-10"
+                    >
+                        Or check available dates ↓
+                    </a>
 
                     <div className="flex flex-col gap-8">
                         <div className="flex items-start gap-4">
@@ -98,6 +106,8 @@ export default function ContactPage() {
                     <ContactForm />
                 </div>
             </div>
+        </div>
+        <AvailabilityCalendar />
         </main>
     );
 }

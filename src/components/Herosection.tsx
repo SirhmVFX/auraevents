@@ -85,10 +85,10 @@ function Herosection() {
             Book Now
           </a>
           <a
-            href="/contact#enquiry"
+            href="#estimator"
             className="border border-white/70 text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-white/10 transition"
           >
-            Make Enquiries
+            Estimate your budget
           </a>
         </div>
       </div>
