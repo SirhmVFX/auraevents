@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 const partners = [
   { name: "Eko Hotels & Suites", category: "Venue", logo: "/partners/eko.png" },
@@ -37,24 +36,16 @@ const row1 = [...partners.slice(0, 8), ...partners.slice(0, 8)];
 const row2 = [...partners.slice(8), ...partners.slice(8)];
 
 function PartnerCard({ p }: { p: (typeof partners)[0] }) {
-  const isSvg = p.logo.endsWith(".svg");
-  const logoClass = "h-[70%] w-[70%] object-contain";
-
   return (
     <div className="flex items-center gap-4 rounded-2xl border border-black/5 bg-card px-5 py-4 shadow-sm shrink-0 min-w-[240px]">
       <div className="logo-tile relative w-20 h-20 rounded-2xl overflow-hidden flex items-center justify-center p-2.5 shrink-0">
-        {isSvg ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={p.logo} alt={`${p.name} logo`} className={logoClass} />
-        ) : (
-          <Image
-            src={p.logo}
-            alt={`${p.name} logo`}
-            width={80}
-            height={80}
-            className={logoClass}
-          />
-        )}
+        {/* Regular img: some partner files are JPEGs saved as .png, which next/image rejects */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={p.logo}
+          alt={`${p.name} logo`}
+          className="h-[70%] w-[70%] object-contain"
+        />
       </div>
       <div>
         <p className="text-sm font-bold whitespace-nowrap">{p.name}</p>

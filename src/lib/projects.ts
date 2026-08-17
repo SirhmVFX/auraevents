@@ -260,7 +260,7 @@ export const projects: Project[] = [
     description:
       "Keynotes across two stages, 50+ exhibitor booths, and a startup pitch arena.",
     cover:
-      "/assets/4b7176dcd34c21309ed1510a1f91d722.jpg ",
+      "/assets/4b7176dcd34c21309ed1510a1f91d722.jpg",
     services: ["Program", "Exhibition", "AV"],
     attendees: "2,300",
     budgetRange: "$$$$",
