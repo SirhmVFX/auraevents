@@ -232,6 +232,11 @@ html {
   }
 }
 
+@keyframes team-cue-pulse {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 1; }
+}
+
 /* ── Dark mode remaps for existing black/white utilities ─────────── */
 html.dark .bg-white:not([class*="bg-white/"]) {
   background-color: var(--card);
