@@ -96,7 +96,7 @@ function Footer() {
               <address className="not-italic text-sm text-white/70 leading-relaxed">
                 14 Akin Adesola Street
                 <br /> Victoria Island, Lagos
-                <br /> +234 801 234 5678
+                <br /> +234 814 285 6571
               </address>
             </div>
 
@@ -105,7 +105,7 @@ function Footer() {
               <address className="not-italic text-sm text-white/70 leading-relaxed">
                 Plot 1234, Aminu Kano Crescent
                 <br /> Wuse 2, Abuja
-                <br /> +234 802 345 6789
+                <br /> +234 814 285 6571
               </address>
             </div>
 

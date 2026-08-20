@@ -66,8 +66,8 @@ function ContactFormInner() {
                     </p>
                     <p className="mt-6 text-sm text-black/40">
                         Can&apos;t wait? WhatsApp us directly →{" "}
-                        <a href="https://wa.me/2348012345678" className="underline text-black/70" target="_blank" rel="noopener noreferrer">
-                            +234 801 234 5678
+                        <a href="https://wa.me/2348142856571" className="underline text-black/70" target="_blank" rel="noopener noreferrer">
+                            +234 814 285 6571
                         </a>
                     </p>
                 </motion.div>

@@ -12,7 +12,7 @@ const QUICK_MESSAGES = [
 
 export default function WhatsAppButton() {
     const [open, setOpen] = useState(false);
-    const PHONE = "2348012345678";
+    const PHONE = "2348142856571";
     const BASE_URL = `https://wa.me/${PHONE}?text=`;
 
     return (
