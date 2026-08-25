@@ -71,6 +71,16 @@ function Footer() {
                     Contact
                   </Link>
                 </li>
+                <li>
+                  <a
+                    className="hover:text-white transition"
+                    href={process.env.NEXT_PUBLIC_GIFTBOXES_URL || "https://auragiftboxes.vercel.app"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Gift Boxes
+                  </a>
+                </li>
               </ul>
             </nav>
 

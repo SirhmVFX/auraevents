@@ -9,6 +9,7 @@ import Process from "@/components/Process";
 import PortfolioGallery from "@/components/PortfolioGallery";
 import VendorPartners from "@/components/VendorPartners";
 import BudgetEstimator from "@/components/BudgetEstimator";
+import GiftBoxesSister from "@/components/GiftBoxesSister";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <Process />
       <Articles />
       <Newsletter />
+      <GiftBoxesSister />
       <Cta />
     </div>
   );
